@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Khóa học BMS Nam Hoàng</title>
-<meta name="description" content="Ba khóa học BMS thực chiến cho kỹ sư M&E: thiết kế BMS 10 buổi, tư vấn giám sát BMS 10 buổi, lập trình BMS 12 buổi. Khai giảng hàng tuần, học online hoặc offline.">
+<meta name="description" content="Năm khóa học BMS thực chiến: thiết kế BMS 10 buổi, tư vấn giám sát BMS 10 buổi, lập trình BMS 12 buổi, vận hành bảo trì tòa nhà 7 buổi, nâng cao HVAC và BMS 15 buổi. Khai giảng hàng tuần, học online hoặc offline.">
 <meta property="og:title" content="Khóa học BMS thực chiến: thiết kế, tư vấn giám sát, lập trình">
-<meta property="og:description" content="Ba khóa BMS cho kỹ sư M&E từ Nam Hoàng Controls. Khai giảng hàng tuần, học online hoặc offline, chứng chỉ hoàn thành theo cấp độ.">
+<meta property="og:description" content="Năm khóa BMS từ Nam Hoàng Controls, từ thiết kế đến vận hành và nâng cao. Khai giảng hàng tuần, học online hoặc offline, chứng chỉ hoàn thành theo cấp độ.">
 <meta property="og:type" content="website">
 <!-- og:image cần đường dẫn tuyệt đối khi đăng GitHub Pages, ví dụ https://USERNAME.github.io/REPO/images/og-khoa-hoc-bms.jpg -->
 <meta property="og:image" content="images/og-khoa-hoc-bms.jpg">
@@ -21,6 +21,8 @@
   images/khoa-01-thiet-ke-bms.jpg            1600x1200
   images/khoa-02-tu-van-giam-sat-bms.jpg     1600x1200
   images/khoa-03-lap-trinh-bms.jpg           1600x1200
+  images/khoa-04-van-hanh-bao-tri.jpg        1600x1200
+  images/khoa-05-nang-cao-hvac-bms.jpg       1600x1200
   images/giang-vien-nam-hoang.jpg            1200x1500
   images/du-an-hyatt-da-nang.jpg             1200x900
   images/du-an-landmark-81.jpg               1200x900
@@ -102,6 +104,8 @@ section { padding-block: var(--sp-900); }
 .brand { display: flex; align-items: center; gap: var(--sp-75); font-weight: 500; font-size: 15px; }
 .brand-mark { position: relative; overflow: hidden; width: 28px; height: 28px; border-radius: 8px; background: var(--navy); color: var(--teal); display: grid; place-items: center; font-weight: 600; font-size: 12px; flex: none; }
 .brand-mark img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #fff; }
+.logo { height: 32px; width: auto; max-width: 120px; object-fit: contain; border-radius: 6px; background: #fff; flex: none; }
+.logo.lg { height: 48px; max-width: 160px; border-radius: 8px; }
 .slogan { font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
 .nav-links { display: flex; align-items: center; gap: var(--sp-300); }
 .nav-links a:not(.btn) { font-size: 14px; line-height: 20px; color: #a7b6ca; transition: color 300ms var(--ease); }
@@ -164,6 +168,12 @@ section { padding-block: var(--sp-900); }
 .b-teal { background: var(--teal); color: var(--navy-deep); }
 .b-gold { background: var(--gold); color: var(--navy-deep); }
 .b-green { background: var(--green); color: #fff; }
+.b-navy { background: var(--navy); color: #fff; }
+.b-ink { background: var(--navy-deep); color: var(--teal); }
+.subhead { display: flex; flex-direction: column; gap: var(--sp-75); margin: 0 0 var(--sp-300); }
+.subhead + .courses { margin-bottom: var(--sp-700); }
+.courses.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.courses.two .media { aspect-ratio: 16 / 10; }
 .num-label { font-size: 14px; line-height: 20px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
 .syl { display: flex; flex-direction: column; gap: var(--sp-100); font-size: 15px; line-height: 22px; }
 .syl li { display: flex; gap: var(--sp-75); }
@@ -302,13 +312,15 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
     <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17v.01"/></symbol>
     <symbol id="i-building" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h2M13 8h2M9 12h2M13 12h2M10 21v-4h4v4"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 00-5 5L3 18l3 3 6.5-6.5a4 4 0 005-5l-2.5 2.5-2.5-.5-.5-2.5z"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 17a8 8 0 1116 0"/><path d="M12 17l4-6"/><circle cx="12" cy="17" r="1"/></symbol>
     <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></symbol>
   </defs>
 </svg>
 
 <header class="nav" id="nav">
   <div class="nav-in">
-    <a class="brand" href="#top" aria-label="Nam Hoàng Controls, về đầu trang"><span class="brand-mark">NH<img src="images/logo.jpg" alt="" onerror="this.remove()"></span><span>Nam Hoàng Controls</span></a>
+    <a class="brand" href="#top" aria-label="Nam Hoàng Controls, về đầu trang"><img class="logo" src="images/logo.jpg" alt="" width="32" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="brand-mark" style="display:none">NH</span><span>Nam Hoàng Controls</span></a>
     <nav class="nav-links" aria-label="Điều hướng chính">
       <a href="#khoa-hoc">Khóa học</a>
       <a href="#lo-trinh">Cách học</a>
@@ -332,9 +344,9 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
   <section class="hero dark" id="top">
     <div class="wrap">
       <div class="hero-copy">
-        <span class="eyebrow">Khóa học BMS cho kỹ sư M&amp;E</span>
+        <span class="eyebrow">Khóa học BMS và HVAC thực chiến</span>
         <h1 class="display">Làm chủ BMS từ bản vẽ đến dòng lệnh.</h1>
-        <p class="lead">Ba khóa thực chiến về thiết kế, tư vấn giám sát và lập trình BMS, do chuyên gia có 15 năm làm các dự án như Landmark 81, VCB Tower và VNG Data Center giảng dạy.</p>
+        <p class="lead">Năm khóa thực chiến từ thiết kế, tư vấn giám sát, lập trình đến vận hành bảo trì và nâng cao HVAC &amp; BMS, do chuyên gia có 15 năm làm các dự án như Landmark 81, VCB Tower và VNG Data Center giảng dạy.</p>
         <div class="hero-actions">
           <a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký tư vấn khóa học</a>
           <a class="link" href="#khoa-hoc">Xem ba khóa học <svg class="icon sm" aria-hidden="true"><use href="#i-chev"/></svg></a>
@@ -344,7 +356,7 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
       <div class="stack" id="stack" aria-label="Kiến trúc BMS ba tầng">
         <div class="stack-label">
           <span class="eyebrow">Một hệ thống BMS, ba tầng</span>
-          <span class="small muted">Ba khóa học đi qua cả ba tầng</span>
+          <span class="small muted">Các khóa học đi qua cả ba tầng</span>
         </div>
         <div class="tiers">
           <div class="tier t-green">
@@ -405,9 +417,13 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
   <section class="light" id="khoa-hoc" style="padding-top:0">
     <div class="wrap">
       <div class="head reveal">
-        <span class="eyebrow">Ba khóa học</span>
+        <span class="eyebrow">Năm khóa học</span>
         <h2 class="h2">Chọn khóa theo vai trò của bạn.</h2>
         <p class="lead">Mỗi khóa phục vụ một vai trò trong dự án BMS. Giáo trình dưới đây là bản dự kiến, buổi tư vấn sẽ chốt theo trình độ và mục tiêu của bạn.</p>
+      </div>
+      <div class="subhead reveal">
+        <span class="eyebrow">Theo vai trò trong dự án</span>
+        <h3 class="h3">Thiết kế, giám sát và lập trình.</h3>
       </div>
       <div class="courses reveal">
         <article class="course" aria-labelledby="k1">
@@ -487,6 +503,68 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
             <p class="who">Dành cho <b>kỹ sư tích hợp, lập trình, vận hành BMS</b></p>
             <dl class="specs">
               <div><dt>Số buổi</dt><dd>12 buổi</dd></div>
+              <div><dt>Khai giảng</dt><dd>Hàng tuần</dd></div>
+              <div><dt>Hình thức</dt><dd>Online hoặc offline</dd></div>
+            </dl>
+            <div class="actions"><a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký khóa này</a></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="subhead reveal" style="margin-top:var(--sp-700)">
+        <span class="eyebrow">Vận hành và nâng cao</span>
+        <h3 class="h3">Cho đội vận hành và kỹ sư muốn đi sâu hơn.</h3>
+      </div>
+      <div class="courses two reveal">
+        <article class="course" aria-labelledby="k4">
+          <div class="media">
+            <svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg>
+            <img src="images/khoa-04-van-hanh-bao-tri.jpg" alt="Kỹ thuật viên vận hành và bảo trì hệ thống BMS trong tòa nhà" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="body">
+            <div class="kicker"><span class="num-label">Khóa 04</span><span class="badge b-navy">7 buổi</span></div>
+            <div style="display:flex;flex-direction:column;gap:var(--sp-75)">
+              <h3 class="h3" id="k4">Vận hành và bảo trì tòa nhà</h3>
+              <p class="muted">Vận hành hệ thống HVAC và BMS ổn định, phát hiện sớm và xử lý sự cố ngay tại hiện trường.</p>
+            </div>
+            <ul class="syl">
+              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Hệ thống HVAC và BMS trong tòa nhà</li>
+              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Đọc giao diện BMS: alarm, trend, lịch vận hành</li>
+              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Kiểm tra định kỳ I/O, DDC, truyền thông</li>
+              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Phân tích alarm và khoanh vùng sự cố hiện trường</li>
+              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Lập kế hoạch và checklist bảo trì</li>
+            </ul>
+            <p class="who">Dành cho <b>kỹ thuật viên vận hành, bảo trì, quản lý tòa nhà</b></p>
+            <dl class="specs">
+              <div><dt>Số buổi</dt><dd>7 buổi</dd></div>
+              <div><dt>Khai giảng</dt><dd>Hàng tuần</dd></div>
+              <div><dt>Hình thức</dt><dd>Online hoặc offline</dd></div>
+            </dl>
+            <div class="actions"><a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký khóa này</a></div>
+          </div>
+        </article>
+
+        <article class="course" aria-labelledby="k5">
+          <div class="media">
+            <svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg>
+            <img src="images/khoa-05-nang-cao-hvac-bms.jpg" alt="Phân tích dữ liệu vận hành chiller và AHU trên hệ thống BMS" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="body">
+            <div class="kicker"><span class="num-label">Khóa nâng cao</span><span class="badge b-ink">15 buổi</span></div>
+            <div style="display:flex;flex-direction:column;gap:var(--sp-75)">
+              <h3 class="h3" id="k5">Nâng cao: HVAC &amp; BMS</h3>
+              <p class="muted">Khai thác dữ liệu BMS để tìm điểm thất thoát năng lượng và hiệu chỉnh logic điều khiển, không đánh đổi tiện nghi.</p>
+            </div>
+            <ul class="syl">
+              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Nguyên lý và chiến lược điều khiển chiller, AHU, bơm</li>
+              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Khảo sát hiện trạng và phân tích trend log</li>
+              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Đánh giá hiệu suất, xác định điểm thất thoát năng lượng</li>
+              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Tinh chỉnh setpoint, reset nhiệt độ, áp suất, lịch vận hành</li>
+              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Báo cáo định lượng mức tiết kiệm sau tối ưu</li>
+            </ul>
+            <p class="who">Dành cho <b>kỹ sư đã có nền tảng HVAC và BMS, kỹ sư trưởng, quản lý kỹ thuật</b></p>
+            <dl class="specs">
+              <div><dt>Số buổi</dt><dd>15 buổi</dd></div>
               <div><dt>Khai giảng</dt><dd>Hàng tuần</dd></div>
               <div><dt>Hình thức</dt><dd>Online hoặc offline</dd></div>
             </dl>
@@ -581,15 +659,15 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
         <h2 class="h2">Giải đáp trước khi bạn đăng ký.</h2>
       </div>
       <div class="faq reveal">
-        <details><summary>Tôi nên chọn khóa nào?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Chọn theo vai trò. Khóa Thiết kế BMS dành cho kỹ sư thiết kế M&amp;E. Khóa Tư vấn giám sát BMS dành cho kỹ sư giám sát, ban quản lý dự án và kỹ sư trưởng. Khóa Lập trình BMS dành cho kỹ sư tích hợp và vận hành. Nếu chưa chắc, hãy đăng ký tư vấn để được gợi ý.</p></details>
-        <details><summary>Mỗi khóa học bao nhiêu buổi?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Thiết kế BMS 10 buổi, Tư vấn giám sát BMS 10 buổi, Lập trình BMS 12 buổi.</p></details>
+        <details><summary>Tôi nên chọn khóa nào?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Chọn theo vai trò. Thiết kế BMS dành cho kỹ sư thiết kế M&amp;E. Tư vấn giám sát BMS dành cho kỹ sư giám sát, ban quản lý dự án và kỹ sư trưởng. Lập trình BMS dành cho kỹ sư tích hợp. Vận hành và bảo trì tòa nhà dành cho kỹ thuật viên và quản lý tòa nhà. Khóa nâng cao HVAC &amp; BMS dành cho kỹ sư đã có nền tảng. Nếu chưa chắc, hãy đăng ký tư vấn để được gợi ý.</p></details>
+        <details><summary>Mỗi khóa học bao nhiêu buổi?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Thiết kế BMS 10 buổi, Tư vấn giám sát BMS 10 buổi, Lập trình BMS 12 buổi, Vận hành và bảo trì tòa nhà 7 buổi, Nâng cao HVAC &amp; BMS 15 buổi.</p></details>
         <details><summary>Khi nào khai giảng và học hình thức nào?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Các khóa khai giảng hàng tuần. Bạn có thể học online hoặc offline.</p></details>
         <details><summary>Tôi cần biết gì trước khi học?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Kiến thức HVAC cơ bản là lợi thế. Chương trình đào tạo của Nam Hoàng Controls có phần HVAC cơ bản, và tư vấn viên sẽ xác nhận mức độ phù hợp trước khi bạn đăng ký.</p></details>
         <details><summary>Học phí là bao nhiêu?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Hãy đăng ký tư vấn qua form để nhận thông tin học phí phù hợp với khóa và hình thức học bạn chọn.</p></details>
         <details><summary>Có chứng chỉ khi hoàn thành không?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Có. Học viên hoàn thành khóa nhận chứng chỉ hoàn thành theo cấp độ tương ứng.</p></details>
         <details><summary>Ai là người giảng dạy?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Kỹ sư Nam Hoàng, người có 15 năm làm BMS và T&amp;C, trong đó hơn 10 năm chuyên sâu hệ thống Honeywell và hơn 5 năm làm chuyên gia T&amp;C độc lập.</p></details>
         <details><summary>Công ty tôi muốn đào tạo cả nhóm thì sao?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Nội dung được điều chỉnh theo từng đối tượng và nhu cầu thực tế tại dự án. Hãy gửi yêu cầu qua form để được tư vấn chương trình phù hợp cho nhóm.</p></details>
-        <details><summary>Học xong tôi làm được gì?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Sau khóa Thiết kế, bạn lập được point list và SOO rõ ràng. Sau khóa Tư vấn giám sát, bạn xây dựng kế hoạch T&amp;C và kiểm tra nghiệm thu theo checklist. Sau khóa Lập trình, bạn viết và dò lỗi logic DDC từ SOO.</p></details>
+        <details><summary>Học xong tôi làm được gì?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Sau khóa Thiết kế, bạn lập được point list và SOO rõ ràng. Sau khóa Tư vấn giám sát, bạn xây dựng kế hoạch T&amp;C và kiểm tra nghiệm thu theo checklist. Sau khóa Lập trình, bạn viết và dò lỗi logic DDC từ SOO. Sau khóa Vận hành và bảo trì, bạn kiểm tra định kỳ và xử lý sự cố tại hiện trường. Sau khóa Nâng cao, bạn tìm điểm thất thoát năng lượng và hiệu chỉnh setpoint dựa trên dữ liệu.</p></details>
       </div>
     </div>
   </section>
@@ -615,7 +693,7 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
   <div class="wrap">
     <div class="foot">
       <div style="display:flex;flex-direction:column;gap:var(--sp-100)">
-        <span class="brand" style="color:var(--fg)"><span class="brand-mark">NH<img src="images/logo.jpg" alt="" onerror="this.remove()"></span><span>Nam Hoàng Controls</span></span>
+        <span class="brand" style="color:var(--fg)"><img class="logo lg" src="images/logo.jpg" alt="" width="48" height="48" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="brand-mark" style="display:none">NH</span><span>Nam Hoàng Controls</span></span>
         <span class="slogan">Building Efficiency</span>
         <p class="muted" style="max-width:360px">Đối tác kỹ thuật độc lập về giải pháp, đào tạo và tư vấn hệ thống BMS và T&amp;C cơ điện.</p>
       </div>
@@ -625,6 +703,8 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
           <li><a href="#khoa-hoc">Thiết kế BMS</a></li>
           <li><a href="#khoa-hoc">Tư vấn giám sát BMS</a></li>
           <li><a href="#khoa-hoc">Lập trình BMS</a></li>
+          <li><a href="#khoa-hoc">Vận hành và bảo trì tòa nhà</a></li>
+          <li><a href="#khoa-hoc">Nâng cao: HVAC &amp; BMS</a></li>
         </ul>
       </div>
       <div>
@@ -644,8 +724,8 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Tôi nên chọn khóa nào?","acceptedAnswer":{"@type":"Answer","text":"Chọn theo vai trò: Thiết kế BMS cho kỹ sư thiết kế M&E, Tư vấn giám sát BMS cho kỹ sư giám sát, ban quản lý dự án và kỹ sư trưởng, Lập trình BMS cho kỹ sư tích hợp và vận hành."}},
-{"@type":"Question","name":"Mỗi khóa học bao nhiêu buổi?","acceptedAnswer":{"@type":"Answer","text":"Thiết kế BMS 10 buổi, Tư vấn giám sát BMS 10 buổi, Lập trình BMS 12 buổi."}},
+{"@type":"Question","name":"Tôi nên chọn khóa nào?","acceptedAnswer":{"@type":"Answer","text":"Chọn theo vai trò: Thiết kế BMS cho kỹ sư thiết kế M&E, Tư vấn giám sát BMS cho kỹ sư giám sát và kỹ sư trưởng, Lập trình BMS cho kỹ sư tích hợp, Vận hành và bảo trì tòa nhà cho kỹ thuật viên, Nâng cao HVAC và BMS cho kỹ sư đã có nền tảng."}},
+{"@type":"Question","name":"Mỗi khóa học bao nhiêu buổi?","acceptedAnswer":{"@type":"Answer","text":"Thiết kế BMS 10 buổi, Tư vấn giám sát BMS 10 buổi, Lập trình BMS 12 buổi, Vận hành và bảo trì tòa nhà 7 buổi, Nâng cao HVAC và BMS 15 buổi."}},
 {"@type":"Question","name":"Khi nào khai giảng và học hình thức nào?","acceptedAnswer":{"@type":"Answer","text":"Các khóa khai giảng hàng tuần. Bạn có thể học online hoặc offline."}},
 {"@type":"Question","name":"Có chứng chỉ khi hoàn thành không?","acceptedAnswer":{"@type":"Answer","text":"Có. Học viên hoàn thành khóa nhận chứng chỉ hoàn thành theo cấp độ tương ứng."}}
 ]}
