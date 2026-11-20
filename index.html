@@ -3,26 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Khóa học BMS Nam Hoàng</title>
+<title>Khóa học BMS Nam Hoàng v2</title>
 <meta name="description" content="Năm khóa học BMS thực chiến: thiết kế BMS 10 buổi, tư vấn giám sát BMS 10 buổi, lập trình BMS 12 buổi, vận hành bảo trì tòa nhà 7 buổi, nâng cao HVAC và BMS 15 buổi. Khai giảng hàng tuần, học online hoặc offline.">
-<meta property="og:title" content="Khóa học BMS thực chiến: thiết kế, tư vấn giám sát, lập trình">
-<meta property="og:description" content="Năm khóa BMS từ Nam Hoàng Controls, từ thiết kế đến vận hành và nâng cao. Khai giảng hàng tuần, học online hoặc offline, chứng chỉ hoàn thành theo cấp độ.">
+<meta property="og:title" content="Khóa học BMS thực chiến, từ thiết kế đến vận hành">
+<meta property="og:description" content="Năm khóa BMS từ Nam Hoàng Controls, từ thiết kế đến vận hành và nâng cao. Building Efficiency.">
 <meta property="og:type" content="website">
-<!-- og:image cần đường dẫn tuyệt đối khi đăng GitHub Pages, ví dụ https://USERNAME.github.io/REPO/images/og-khoa-hoc-bms.jpg -->
+<!-- og:image cần đường dẫn tuyệt đối, ví dụ https://khoahoc.namhoangcontrols.com/images/og-khoa-hoc-bms.jpg -->
 <meta property="og:image" content="images/og-khoa-hoc-bms.jpg">
 <meta name="author" content="Nam Hoàng Controls, Building Efficiency">
-<meta name="theme-color" content="#0a1424">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232d4e7a'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='700' text-anchor='middle' fill='%234db6bc'%3ENH%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0A1424">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1424'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='28' font-weight='700' text-anchor='middle' fill='%232DD4BF'%3ENH%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
 <!--
-  ẢNH (đặt trong thư mục images/ cạnh index.html):
-  images/khoa-01-thiet-ke-bms.jpg            1600x1200
-  images/khoa-02-tu-van-giam-sat-bms.jpg     1600x1200
-  images/khoa-03-lap-trinh-bms.jpg           1600x1200
-  images/khoa-04-van-hanh-bao-tri.jpg        1600x1200
-  images/khoa-05-nang-cao-hvac-bms.jpg       1600x1200
+  v2 theo design brief profile.namhoangcontrols.com. Đặt ảnh trong thư mục images/ cạnh file này:
+  images/logo.jpg                            vuông, tối thiểu 256x256
+  images/hero-bms.jpg                        1920x1080 (ảnh nền sau tiêu đề hero, tối, ít chi tiết bên trái)
+  images/khoa-01-thiet-ke-bms.jpg            1600x1000
+  images/khoa-02-tu-van-giam-sat-bms.jpg     1600x1000
+  images/khoa-03-lap-trinh-bms.jpg           1600x1000
+  images/khoa-04-van-hanh-bao-tri.jpg        1600x1000
+  images/khoa-05-nang-cao-hvac-bms.jpg       1600x1000
   images/giang-vien-nam-hoang.jpg            1200x1500
   images/du-an-hyatt-da-nang.jpg             1200x900
   images/du-an-landmark-81.jpg               1200x900
@@ -31,267 +33,251 @@
   images/du-an-vng-data-center.jpg           1200x900
   images/du-an-lego-viet-nam.jpg             1200x900
   images/og-khoa-hoc-bms.jpg                 1200x630
-  images/logo.jpg                            vuông, tối thiểu 256x256
-  Chưa có ảnh thì khung hiện nền phẳng và biểu tượng, trang vẫn đẹp.
+  Thiếu ảnh thì khung hiện nền phẳng và biểu tượng, trang vẫn dùng được.
 -->
 <style>
-/* Layout idea: Apple style rhythm. Dark hero, light course stage, dark tagline, light steps, dark instructor, light FAQ, dark close. Big type, hairlines, pill buttons, translucent sticky bar. */
+/* Layout idea: dark engineering sheet from the profile site. Solid 69px nav, left aligned hero over a photo, two column grids, mono labels, pill buttons, ring shadows, light paper bands for numbers and FAQ. */
 :root {
-  --navy-deep: #0a1424;
-  --navy: #2d4e7a;
-  --teal: #4db6bc;
-  --gold: #fdb61d;
-  --green: #009933;
-  --light: #f2f4f8;
-  --ink: #333333;
+  --ink: #0A1424;
+  --ink-deep: #071020;
+  --ink-card: #0D1B30;
+  --ink-text: #08131F;
+  --mist: #C6D3E2;
+  --slate: #8397AE;
+  --edge: #6B7F98;
+  --teal: #2DD4BF;
+  --teal-hover: #5EEAD4;
+  --teal-deep: #0E7C70;
+  --gold: #D4A03C;
+  --paper: #F4F2ED;
+  --white: #FFFFFF;
+  --head: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --font: "Roboto", "Segoe UI", system-ui, sans-serif;
-  --sp-25: 2px; --sp-50: 4px; --sp-75: 8px; --sp-100: 12px; --sp-200: 16px; --sp-300: 24px;
-  --sp-400: 32px; --sp-500: 40px; --sp-600: 48px; --sp-700: 64px; --sp-800: 80px; --sp-900: 96px;
+  --s8: 8px; --s12: 12px; --s16: 16px; --s20: 20px; --s24: 24px; --s28: 28px; --s56: 56px;
+  --section: 110px;
+  --nav-h: 69px;
+  --ring: 0 0 0 1px rgba(255, 255, 255, 0.1);
   color-scheme: dark;
 }
-.dark  { --bg: #0a1424; --fg: #f2f4f8; --muted: #a7b6ca; --card: #101e34; --card-2: #16294a; --line: #24385a; --accent: #4db6bc; background: var(--bg); color: var(--fg); }
-.light { --bg: #f2f4f8; --fg: #0a1424; --muted: #5a6678; --card: #ffffff; --card-2: #e8edf4; --line: #d6deea; --accent: #2d4e7a; background: var(--bg); color: var(--fg); }
+.dark  { --bg: var(--ink); --fg: var(--white); --text: var(--mist); --muted: var(--slate); --card: var(--ink-card); --accent: var(--teal); --line: rgba(255,255,255,0.1); --shadow: var(--ring); background: var(--bg); color: var(--text); }
+.deep  { --bg: var(--ink-deep); --fg: var(--white); --text: var(--mist); --muted: var(--slate); --card: var(--ink-card); --accent: var(--teal); --line: rgba(255,255,255,0.1); --shadow: var(--ring); background: var(--bg); color: var(--text); }
+.paper { --bg: var(--paper); --fg: var(--ink); --text: #243247; --muted: #4F6076; --card: var(--white); --accent: #0B6B61; --line: #D8D3C8; --shadow: 0 0 0 1px #D8D3C8; background: var(--bg); color: var(--text); }
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: var(--sp-700); -webkit-text-size-adjust: 100%; background: var(--navy-deep); }
-body { margin: 0; font-family: var(--font); font-style: normal; font-size: 17px; line-height: 1.5; font-weight: 400; text-wrap: pretty; overflow-x: hidden; background: var(--navy-deep); color: #f2f4f8; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + var(--s16)); -webkit-text-size-adjust: 100%; background: var(--ink); }
+body { margin: 0; font-family: var(--body); font-style: normal; font-size: 16px; line-height: 1.6; font-weight: 400; text-wrap: pretty; overflow-x: hidden; background: var(--ink); color: var(--mist); }
 img, svg { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, h4, p, ul, dl, dd, figure { margin: 0; padding: 0; }
 ul { list-style: none; }
-h1, h2, h3, h4 { text-wrap: balance; font-weight: 600; }
+h1, h2, h3 { font-family: var(--head); text-wrap: balance; color: var(--fg); }
 .icon { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex: none; }
 .icon.sm { width: 16px; height: 16px; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; border-radius: 8px; }
+.paper :focus-visible { outline-color: var(--teal-deep); }
 
-/* Type: tight tracking as size grows, loose leading as it shrinks */
-.display { font-size: clamp(40px, 7.2vw, 88px); line-height: 1.04; letter-spacing: -0.035em; }
-.h2 { font-size: clamp(32px, 5vw, 56px); line-height: 1.08; letter-spacing: -0.03em; }
-.h3 { font-size: clamp(24px, 3vw, 32px); line-height: 1.15; letter-spacing: -0.02em; }
-.h4 { font-size: 24px; line-height: 1.2; letter-spacing: -0.015em; }
-.lead { font-size: clamp(19px, 2.2vw, 24px); line-height: 1.4; letter-spacing: -0.01em; color: var(--muted); font-weight: 400; }
-.eyebrow { font-size: 14px; line-height: 20px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent); }
+/* Type */
+h1 { font-size: clamp(44px, 7.4vw, 82px); line-height: 1.04; letter-spacing: -0.03em; font-weight: 500; }
+h2 { font-size: clamp(30px, 4vw, 40px); line-height: 1.22; letter-spacing: -0.02em; font-weight: 500; }
+h3 { font-size: 19px; line-height: 1.3; font-weight: 600; }
+.lead { font-size: 19px; line-height: 1.55; color: var(--text); max-width: 640px; }
+.mono-label { font-family: var(--mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+.h4 { font-size: 13px; line-height: 20px; font-weight: 600; letter-spacing: 0.096em; text-transform: uppercase; }
 .small { font-size: 14px; line-height: 20px; }
 .muted { color: var(--muted); }
 
-.wrap { width: min(1120px, 100% - 48px); margin-inline: auto; }
-section { padding-block: var(--sp-900); }
-.center { text-align: center; }
-.head { display: flex; flex-direction: column; gap: var(--sp-200); align-items: center; text-align: center; max-width: 760px; margin: 0 auto var(--sp-700); }
+.wrap { width: min(1200px, 100% - 48px); margin-inline: auto; }
+section { padding-block: var(--section); }
+.stack-8 { display: flex; flex-direction: column; gap: var(--s8); }
+.split { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: var(--s56); align-items: start; }
+.split > .sticky { position: sticky; top: calc(var(--nav-h) + var(--s28)); display: flex; flex-direction: column; gap: var(--s16); }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s24); }
+.sec-head { display: flex; flex-direction: column; gap: var(--s16); max-width: 720px; margin-bottom: var(--s56); }
 
-/* Skip link */
-.skip { position: absolute; left: var(--sp-200); top: -96px; background: var(--teal); color: var(--navy-deep); padding: var(--sp-75) var(--sp-100); border-radius: 8px; z-index: 100; transition: transform 500ms var(--ease); font-size: 14px; }
+.skip { position: absolute; left: var(--s16); top: -96px; background: var(--teal); color: var(--ink-text); padding: var(--s8) var(--s12); border-radius: 50px; z-index: 100; transition: transform 500ms var(--ease); font-size: 14px; }
 .skip:focus { transform: translateY(112px); }
 
-/* Buttons: pills, instant press feedback */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--sp-75); padding: var(--sp-100) var(--sp-300); border-radius: 980px; border: 1px solid transparent; background: var(--teal); color: var(--navy-deep); font-size: 17px; line-height: 24px; font-weight: 500; cursor: pointer; transition: transform 300ms var(--ease), background-color 300ms var(--ease), border-color 300ms var(--ease); max-width: 100%; text-align: center; }
-.btn:hover { background: #6cc7cc; }
-.btn:active { transform: scale(0.97); transition-duration: 100ms; }
-.light .btn { background: var(--navy); color: #fff; }
-.light .btn:hover { background: #3a6196; }
-.btn.sm { padding: var(--sp-50) var(--sp-200); font-size: 14px; line-height: 20px; }
-.btn.outline { background: transparent; color: var(--fg); border-color: var(--line); }
-.light .btn.outline { color: var(--navy); border-color: var(--navy); }
-.btn.outline:hover { background: var(--card-2); }
-.link { display: inline-flex; align-items: center; gap: var(--sp-50); color: var(--accent); font-size: 17px; line-height: 24px; font-weight: 500; transition: gap 300ms var(--ease); }
-.dark .link { color: var(--teal); }
-.link:hover { gap: var(--sp-75); }
+/* Buttons and links */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--s8); height: 46px; padding: 13px 24px; border-radius: 50px; border: 0; background: var(--teal); color: var(--ink-text); font-family: var(--body); font-size: 15px; line-height: 20px; font-weight: 600; cursor: pointer; transition: background-color 300ms var(--ease), transform 300ms var(--ease); max-width: 100%; white-space: nowrap; }
+.btn span { display: inline-block; transition: transform 500ms var(--ease); }
+.btn:hover { background: var(--teal-hover); color: var(--ink-text); }
+.btn:hover span { transform: translateX(4px); }
+.btn:active { transform: scale(0.98); }
+.btn.dark { background: var(--ink); color: var(--white); }
+.btn.dark:hover { background: #16294a; color: var(--white); }
+.btn.ghost { background: transparent; color: var(--teal); box-shadow: inset 0 0 0 1px var(--teal-deep); }
+.btn.ghost:hover { background: rgba(45, 212, 191, 0.1); color: var(--teal-hover); }
+.paper .btn:not(.dark):not(.ghost) { background: var(--ink); color: var(--white); }
+.paper .btn:not(.dark):not(.ghost):hover { background: #16294a; }
 
-/* Nav: translucent full width bar */
-.nav { position: sticky; top: 0; z-index: 50; background: rgba(10, 20, 36, 0.72); -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid transparent; transition: border-color 300ms var(--ease); color: #f2f4f8; }
-.nav.scrolled { border-bottom-color: #24385a; }
-.nav-in { width: min(1120px, 100% - 48px); margin-inline: auto; height: 56px; display: flex; align-items: center; justify-content: space-between; gap: var(--sp-300); }
-.brand { display: flex; align-items: center; gap: var(--sp-75); font-weight: 500; font-size: 15px; }
-.brand-mark { position: relative; overflow: hidden; width: 28px; height: 28px; border-radius: 8px; background: var(--navy); color: var(--teal); display: grid; place-items: center; font-weight: 600; font-size: 12px; flex: none; }
-.brand-mark img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #fff; }
-.logo { height: 32px; width: auto; max-width: 120px; object-fit: contain; border-radius: 6px; background: #fff; flex: none; }
-.logo.lg { height: 48px; max-width: 160px; border-radius: 8px; }
-.slogan { font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
-.nav-links { display: flex; align-items: center; gap: var(--sp-300); }
-.nav-links a:not(.btn) { font-size: 14px; line-height: 20px; color: #a7b6ca; transition: color 300ms var(--ease); }
-.nav-links a:not(.btn):hover, .nav-links a[aria-current="true"] { color: #f2f4f8; }
-.menu-toggle { display: none; width: 40px; height: 40px; border: 0; background: transparent; color: inherit; cursor: pointer; position: relative; }
-.menu-toggle span { position: absolute; left: 10px; right: 10px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 500ms var(--ease), opacity 300ms var(--ease); }
-.menu-toggle span:nth-child(1) { top: 15px; }
-.menu-toggle span:nth-child(2) { top: 24px; }
-.menu-open .menu-toggle span:nth-child(1) { transform: translateY(4.5px) rotate(45deg); }
-.menu-open .menu-toggle span:nth-child(2) { transform: translateY(-4.5px) rotate(-45deg); }
-.panel { position: fixed; inset: 0; z-index: 40; background: rgba(10, 20, 36, 0.96); -webkit-backdrop-filter: blur(28px); backdrop-filter: blur(28px); padding: var(--sp-800) var(--sp-300) var(--sp-400); display: flex; flex-direction: column; gap: var(--sp-75); opacity: 0; visibility: hidden; transition: opacity 500ms var(--ease), visibility 0s linear 500ms; overflow-y: auto; color: #f2f4f8; }
+/* Nav */
+.nav { position: sticky; top: 0; z-index: 50; height: var(--nav-h); background: var(--ink); box-shadow: 0 1px 0 rgba(255,255,255,0.1); }
+.nav-in { width: min(1200px, 100% - 48px); height: 100%; margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: var(--s24); }
+.brand { display: flex; align-items: center; gap: var(--s12); }
+.brand-text { display: flex; flex-direction: column; }
+.brand-name { font-family: var(--head); font-size: 15px; line-height: 18px; font-weight: 600; color: var(--white); letter-spacing: -0.01em; }
+.brand-slogan { font-family: var(--mono); font-size: 11px; line-height: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate); }
+.logo { height: 36px; width: auto; max-width: 120px; object-fit: contain; border-radius: 8px; background: var(--white); flex: none; }
+.logo.lg { height: 48px; max-width: 160px; }
+.brand-mark { width: 36px; height: 36px; border-radius: 8px; background: var(--ink-card); color: var(--teal); display: grid; place-items: center; font-family: var(--head); font-weight: 600; font-size: 14px; box-shadow: var(--ring); flex: none; }
+.nav-links { display: flex; align-items: center; gap: var(--s8); }
+.nav-links a:not(.btn) { padding: 8px 12px; font-size: 14px; line-height: 20px; font-weight: 500; color: var(--mist); transition: color 300ms var(--ease); }
+.nav-links a:not(.btn):hover, .nav-links a[aria-current="true"] { color: var(--teal-hover); }
+.nav-links .btn { height: 40px; padding: 10px 20px; font-size: 14px; margin-left: var(--s8); }
+.menu-toggle { display: none; width: 44px; height: 44px; border: 0; background: transparent; color: var(--white); cursor: pointer; position: relative; }
+.menu-toggle span { position: absolute; left: 11px; right: 11px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 500ms var(--ease); }
+.menu-toggle span:nth-child(1) { top: 17px; }
+.menu-toggle span:nth-child(2) { top: 25px; }
+.menu-open .menu-toggle span:nth-child(1) { transform: translateY(4px) rotate(45deg); }
+.menu-open .menu-toggle span:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
+.panel { position: fixed; inset: var(--nav-h) 0 0 0; z-index: 40; background: var(--ink); padding: var(--s24) var(--s24) var(--s56); display: flex; flex-direction: column; gap: 4px; opacity: 0; visibility: hidden; transition: opacity 500ms var(--ease), visibility 0s linear 500ms; overflow-y: auto; }
 .menu-open .panel { opacity: 1; visibility: visible; transition-delay: 0s; }
-.panel a:not(.btn) { padding: var(--sp-100) 0; border-bottom: 1px solid #24385a; font-size: 28px; line-height: 36px; font-weight: 600; letter-spacing: -0.02em; }
-.panel .btn { margin-top: var(--sp-200); }
+.panel a:not(.btn) { padding: var(--s16) 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-family: var(--head); font-size: 28px; line-height: 36px; font-weight: 500; color: var(--white); letter-spacing: -0.02em; }
+.panel .btn { margin-top: var(--s24); }
 .panel > * { opacity: 0; transform: translateY(24px); transition: transform 500ms var(--ease), opacity 500ms var(--ease); }
 .menu-open .panel > * { opacity: 1; transform: none; }
 
-/* Hero */
-.hero { padding-top: var(--sp-800); padding-bottom: var(--sp-800); text-align: center; overflow: clip; }
-.hero-copy { display: flex; flex-direction: column; align-items: center; gap: var(--sp-300); }
-.hero h1 { max-width: 760px; background: linear-gradient(90deg, #ffffff, #9b9b9b); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; padding-bottom: var(--sp-50); }
-.hero .lead { max-width: 680px; }
-.hero-actions { display: flex; gap: var(--sp-300); align-items: center; justify-content: center; flex-wrap: wrap; margin-top: var(--sp-100); }
-.stack { --p: 0; margin-top: var(--sp-800); background: var(--card); border: 1px solid var(--line); border-radius: 32px; padding: var(--sp-500); transform: translateY(calc((1 - var(--p)) * 32px)) scale(calc(0.94 + 0.06 * var(--p))); transform-origin: 50% 0; will-change: transform; text-align: left; }
-.stack-label { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-300); flex-wrap: wrap; gap: var(--sp-75); }
-.tiers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-600); }
-.tier { position: relative; background: var(--bg); border: 1px solid var(--line); border-radius: 24px; padding: var(--sp-300); display: flex; flex-direction: column; gap: var(--sp-75); min-height: 200px; }
-.tier + .tier::before { content: ""; position: absolute; left: calc(-1 * var(--sp-600)); top: 50%; width: var(--sp-600); height: 2px; background: var(--navy); }
-.tier .tag { font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-.tier .dot { width: 8px; height: 8px; border-radius: 4px; background: var(--green); position: absolute; right: var(--sp-300); top: var(--sp-300); animation: pulse 2400ms var(--ease) infinite; }
-.t-green { border-color: var(--green); } .t-green .tag { color: var(--green); }
-.t-gold { border-color: var(--gold); } .t-gold .tag { color: var(--gold); }
-.t-teal { border-color: var(--teal); } .t-teal .tag { color: var(--teal); }
-.chips { display: flex; gap: var(--sp-75); flex-wrap: wrap; margin-top: auto; }
-.chip { border: 1px solid var(--line); border-radius: 980px; padding: var(--sp-25) var(--sp-100); font-size: 14px; line-height: 20px; color: var(--muted); }
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+/* Hero: left aligned over a photo */
+.hero { position: relative; padding-block: var(--section); overflow: hidden; background: var(--ink-deep); }
+.hero-bg { position: absolute; inset: 0; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+.hero-bg::after { content: ""; position: absolute; inset: 0; background: rgba(7, 16, 32, 0.74); }
+.hero .wrap { position: relative; z-index: 1; }
+.hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s24); max-width: 820px; }
+.hero-actions { display: flex; gap: var(--s20); align-items: center; flex-wrap: wrap; margin-top: var(--s8); }
+.proof { display: flex; flex-wrap: wrap; gap: var(--s8) var(--s24); font-family: var(--mono); font-size: 13px; line-height: 20px; color: var(--mist); }
+.proof span { display: inline-flex; align-items: center; gap: var(--s8); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); flex: none; }
 
-/* Stats */
-.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sp-300); text-align: center; }
-.stat b { display: block; font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.03em; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--teal); }
-.stat span { display: block; margin-top: var(--sp-75); color: var(--muted); font-size: 15px; line-height: 22px; }
+/* Stats on paper */
+.stats { padding-block: var(--s56); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s24); }
+.stat { display: flex; flex-direction: column; gap: var(--s8); padding-top: var(--s16); box-shadow: 0 -1px 0 #C9C3B5; }
+.stat b { font-family: var(--head); font-size: 34px; line-height: 1.1; font-weight: 500; letter-spacing: -0.02em; color: var(--ink); font-variant-numeric: tabular-nums; }
+.stat span { font-size: 14px; line-height: 20px; color: var(--muted); }
 
-/* Problems */
-.problems { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-300); }
-.problem { background: var(--card); border-radius: 24px; padding: var(--sp-400); display: flex; flex-direction: column; gap: var(--sp-100); }
-.problem .icon { width: 32px; height: 32px; color: var(--gold); }
+/* Problems list */
+.rows { display: flex; flex-direction: column; }
+.row { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: var(--s16); padding: var(--s24) 0; border-top: 1px solid var(--line); }
+.row:last-child { border-bottom: 1px solid var(--line); }
+.row .n { font-family: var(--mono); font-size: 13px; line-height: 28px; color: var(--accent); font-weight: 500; }
+.row h3 { margin-bottom: 4px; }
+.row p { color: var(--muted); }
 
-/* Media frames (images optional) */
-.media { position: relative; aspect-ratio: 4 / 3; background: var(--card-2); display: grid; place-items: center; overflow: hidden; color: var(--accent); }
-.media > .icon { width: 48px; height: 48px; opacity: 0.6; }
+/* Cards and media */
+.card { background: var(--card); box-shadow: var(--shadow); border-radius: 12px; color: var(--text); }
+.media { position: relative; aspect-ratio: 16 / 10; background: var(--ink-deep); display: grid; place-items: center; overflow: hidden; color: var(--teal); }
+.paper .media { background: #E7E3DA; color: #0B6B61; }
+.media > .icon { width: 40px; height: 40px; opacity: 0.55; }
 .media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pill { display: inline-flex; align-items: center; border-radius: 50px; padding: 2px 12px; font-family: var(--mono); font-size: 12px; line-height: 20px; font-weight: 500; color: var(--teal); box-shadow: inset 0 0 0 1px var(--teal-deep); }
 
 /* Courses */
-.courses { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-300); }
-.course { background: var(--card); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; transition: transform 500ms var(--ease); }
-.course:active { transform: scale(0.985); transition-duration: 100ms; }
-.course .body { padding: var(--sp-400); display: flex; flex-direction: column; gap: var(--sp-300); flex: 1; }
-.course .kicker { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-100); }
-.badge { display: inline-flex; align-items: center; border-radius: 980px; padding: var(--sp-25) var(--sp-100); font-size: 13px; line-height: 20px; font-weight: 600; }
-.b-teal { background: var(--teal); color: var(--navy-deep); }
-.b-gold { background: var(--gold); color: var(--navy-deep); }
-.b-green { background: var(--green); color: #fff; }
-.b-navy { background: var(--navy); color: #fff; }
-.b-ink { background: var(--navy-deep); color: var(--teal); }
-.subhead { display: flex; flex-direction: column; gap: var(--sp-75); margin: 0 0 var(--sp-300); }
-.subhead + .courses { margin-bottom: var(--sp-700); }
-.courses.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.courses.two .media { aspect-ratio: 16 / 10; }
-.num-label { font-size: 14px; line-height: 20px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
-.syl { display: flex; flex-direction: column; gap: var(--sp-100); font-size: 15px; line-height: 22px; }
-.syl li { display: flex; gap: var(--sp-75); }
-.syl .icon { color: var(--green); margin-top: var(--sp-25); }
-.who { font-size: 15px; line-height: 22px; color: var(--muted); }
+.course { display: flex; flex-direction: column; overflow: hidden; transition: transform 500ms var(--ease), box-shadow 300ms var(--ease); }
+.course:hover { box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.5); }
+.course .media { border-radius: 12px 12px 0 0; }
+.course .body { padding: 24px 22px; display: flex; flex-direction: column; gap: var(--s20); flex: 1; }
+.kicker { display: flex; align-items: center; justify-content: space-between; gap: var(--s12); }
+.syl { display: flex; flex-direction: column; gap: var(--s12); font-size: 15px; line-height: 22px; }
+.syl li { display: flex; gap: var(--s8); }
+.syl .icon { color: var(--teal); margin-top: 3px; }
+.who { font-size: 14px; line-height: 20px; color: var(--muted); }
 .who b { color: var(--fg); font-weight: 500; }
 .specs { border-top: 1px solid var(--line); }
-.specs div { display: flex; justify-content: space-between; gap: var(--sp-200); padding: var(--sp-100) 0; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 22px; }
+.specs div { display: flex; justify-content: space-between; gap: var(--s16); padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 14px; line-height: 20px; }
 .specs dt { color: var(--muted); }
-.specs dd { font-weight: 600; text-align: right; }
-.course .actions { margin-top: auto; padding-top: var(--sp-100); }
-.course .actions .btn { width: 100%; }
+.specs dd { color: var(--fg); font-weight: 500; text-align: right; }
+.actions { margin-top: auto; padding-top: var(--s8); }
+.actions .btn { width: 100%; }
+.cta-cell { background: var(--gold); color: var(--ink); box-shadow: none; padding: 28px 22px 28px 24px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: var(--s20); }
+.cta-cell .mono-label { color: var(--ink); }
+.cta-cell h3 { font-size: 28px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 500; color: var(--ink); max-width: 420px; }
+.cta-cell p { color: #2a2410; max-width: 420px; }
 
 /* Tagline */
-.tagline { padding-block: var(--sp-900); }
-.tagline-text { max-width: 880px; font-size: clamp(32px, 5.4vw, 64px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 600; }
+.tagline-text { max-width: 900px; font-family: var(--head); font-size: clamp(32px, 5.6vw, 64px); line-height: 1.12; letter-spacing: -0.03em; font-weight: 500; color: var(--white); }
 .js .tagline-text .w { opacity: 0.3; transition: opacity 500ms var(--ease); }
 .js .tagline-text .w.on { opacity: 1; }
 
-/* Steps */
-.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-300); }
-.step { background: var(--card); border-radius: 24px; padding: var(--sp-400); display: flex; flex-direction: column; gap: var(--sp-200); }
-.step .n { font-size: 56px; line-height: 1; letter-spacing: -0.04em; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
-
 /* Instructor */
-.expert { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: var(--sp-700); align-items: center; }
-.portrait { border-radius: 32px; aspect-ratio: 4 / 5; }
-.portrait .mono { font-size: 96px; line-height: 1; font-weight: 600; letter-spacing: -0.04em; opacity: 0.5; }
-.expert-copy { display: flex; flex-direction: column; gap: var(--sp-300); align-items: flex-start; }
-.creds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-300); width: 100%; margin-top: var(--sp-100); }
-.creds b { display: block; font-size: 40px; line-height: 1; letter-spacing: -0.03em; color: var(--teal); font-weight: 600; }
-.creds span { display: block; margin-top: var(--sp-75); font-size: 14px; line-height: 20px; color: var(--muted); }
+.portrait { aspect-ratio: 4 / 5; border-radius: 12px; box-shadow: var(--ring); }
+.portrait .mono { font-family: var(--head); font-size: 96px; line-height: 1; font-weight: 500; letter-spacing: -0.04em; opacity: 0.45; }
+.expert-copy { display: flex; flex-direction: column; gap: var(--s24); align-items: flex-start; }
+.creds { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s24); width: 100%; }
+.creds div { padding-top: var(--s16); box-shadow: 0 -1px 0 rgba(255,255,255,0.1); }
+.creds b { display: block; font-family: var(--head); font-size: 34px; line-height: 1.1; font-weight: 500; color: var(--teal); letter-spacing: -0.02em; }
+.creds span { display: block; margin-top: 4px; font-size: 14px; line-height: 20px; color: var(--muted); }
 
-/* Projects carousel */
-.proj-head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--sp-300); margin-bottom: var(--sp-500); flex-wrap: wrap; }
-.arrows { display: flex; gap: var(--sp-75); }
-.arrow { width: 44px; height: 44px; border-radius: 980px; border: 1px solid var(--line); background: var(--card); color: var(--fg); display: grid; place-items: center; cursor: pointer; transition: transform 300ms var(--ease), opacity 300ms var(--ease); }
-.arrow:active { transform: scale(0.94); transition-duration: 100ms; }
-.arrow:disabled { opacity: 0.35; cursor: default; }
-.rail { display: flex; gap: var(--sp-200); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-inline: max(24px, calc((100vw - 1120px) / 2)); scroll-padding-inline: max(24px, calc((100vw - 1120px) / 2)); overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; }
-.rail::-webkit-scrollbar { display: none; }
-.proj { flex: 0 0 min(320px, 78vw); scroll-snap-align: start; background: var(--card); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; }
-.proj .body { padding: var(--sp-300); display: flex; flex-direction: column; gap: var(--sp-50); }
-.proj .tag { font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
-
-/* Assure */
-.assure { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-300); }
-.assure li { background: var(--card); border-radius: 24px; padding: var(--sp-400); display: flex; flex-direction: column; gap: var(--sp-100); }
-.assure .icon { color: var(--green); width: 32px; height: 32px; }
+/* Projects */
+.proj { display: grid; grid-template-columns: 148px minmax(0, 1fr); overflow: hidden; align-items: stretch; }
+.proj .media { aspect-ratio: auto; min-height: 112px; border-radius: 12px 0 0 12px; }
+.pbody { padding: 20px 22px; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
 
 /* FAQ */
-.faq { max-width: 800px; margin-inline: auto; border-top: 1px solid var(--line); }
+.faq { border-top: 1px solid var(--line); }
 .faq details { border-bottom: 1px solid var(--line); }
-.faq summary { list-style: none; cursor: pointer; padding: var(--sp-300) 0; display: flex; justify-content: space-between; align-items: center; gap: var(--sp-200); font-size: 21px; line-height: 28px; font-weight: 500; letter-spacing: -0.01em; transition: color 300ms var(--ease); }
+.faq summary { list-style: none; cursor: pointer; padding: var(--s20) 0; display: flex; justify-content: space-between; align-items: center; gap: var(--s16); font-family: var(--head); font-size: 19px; line-height: 1.35; font-weight: 500; color: var(--fg); transition: color 300ms var(--ease); }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary:hover { color: var(--accent); }
 .faq summary .icon { transition: transform 500ms var(--ease); color: var(--accent); }
 .faq details[open] summary .icon { transform: rotate(45deg); }
-.faq .ans { padding: 0 var(--sp-600) var(--sp-300) 0; color: var(--muted); max-width: 680px; }
+.faq .ans { padding: 0 var(--s56) var(--s24) 0; color: var(--muted); max-width: 640px; }
 
-/* Close */
-.close { text-align: center; }
-.close .inner { display: flex; flex-direction: column; align-items: center; gap: var(--sp-300); max-width: 760px; margin-inline: auto; }
-.contact-row { display: flex; flex-wrap: wrap; gap: var(--sp-300); justify-content: center; color: var(--muted); font-size: 15px; line-height: 22px; }
-.contact-row span { display: inline-flex; gap: var(--sp-75); align-items: center; }
+/* Close band */
+.band { background: var(--teal); color: var(--ink-text); padding-block: 88px; }
+.band-in { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: var(--s56); align-items: center; }
+.band h2 { color: var(--ink-text); }
+.band .mono-label { color: var(--ink-text); }
+.band p { color: #0d2a29; }
+.band .side { display: flex; flex-direction: column; gap: var(--s16); align-items: flex-start; }
+.contact { display: flex; flex-direction: column; gap: var(--s8); font-size: 15px; line-height: 22px; color: var(--ink-text); font-weight: 500; }
+.contact span { display: inline-flex; gap: var(--s8); align-items: center; }
 
 /* Footer */
-footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
-.foot { display: grid; grid-template-columns: 1.4fr 1fr 1.2fr; gap: var(--sp-600); }
-.foot h4 { font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: var(--sp-100); font-weight: 600; }
-.foot ul { display: flex; flex-direction: column; gap: var(--sp-75); color: var(--muted); }
-.foot li { display: flex; gap: var(--sp-75); }
-.foot li .icon { margin-top: var(--sp-25); }
-.foot a:hover { color: var(--accent); }
-.foot-bottom { margin-top: var(--sp-500); padding-top: var(--sp-300); border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: var(--sp-200); flex-wrap: wrap; color: var(--muted); }
+footer { padding-block: var(--s56); font-size: 14px; line-height: 20px; }
+.foot { display: grid; grid-template-columns: 1.4fr 1fr 1.2fr; gap: var(--s56); }
+.foot h4 { color: var(--slate); margin-bottom: var(--s12); }
+.foot ul { display: flex; flex-direction: column; gap: var(--s8); color: var(--mist); }
+.foot li { display: flex; gap: var(--s8); }
+.foot li .icon { margin-top: 2px; color: var(--slate); }
+.foot a:hover { color: var(--teal-hover); }
+.foot-brand { display: flex; flex-direction: column; gap: var(--s12); align-items: flex-start; }
+.foot-bottom { margin-top: var(--s56); padding-top: var(--s24); border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; gap: var(--s16); flex-wrap: wrap; color: var(--slate); font-family: var(--mono); font-size: 12px; }
 
-/* Reveal: rise and fade once */
+/* Reveal */
 .js .reveal { opacity: 0; transform: translateY(32px); transition: opacity 800ms var(--ease), transform 800ms var(--ease); }
 .js .reveal.in { opacity: 1; transform: none; }
 
-/* Responsive */
 @media (max-width: 1024px) {
-  .courses { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-inline: -24px; padding-inline: 24px; scroll-padding-inline: 24px; gap: var(--sp-200); overscroll-behavior-x: contain; }
-  .courses::-webkit-scrollbar { display: none; }
-  .course { flex: 0 0 min(380px, 84%); scroll-snap-align: start; }
-  .expert { grid-template-columns: 1fr; gap: var(--sp-500); }
+  .split, .band-in { grid-template-columns: 1fr; gap: var(--s28); }
+  .split > .sticky { position: static; }
+  .foot { grid-template-columns: 1fr; gap: 40px; }
   .portrait { max-width: 420px; }
-  .foot { grid-template-columns: 1fr; gap: var(--sp-400); }
 }
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .nav-links { display: none; }
   .menu-toggle { display: block; }
-  .tiers { grid-template-columns: 1fr; gap: var(--sp-300); }
-  .tier + .tier::before { left: 50%; top: calc(-1 * var(--sp-300)); width: 2px; height: var(--sp-300); }
-  .tier { min-height: 0; }
-  .problems, .steps, .assure { grid-template-columns: 1fr; }
-  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--sp-500); }
+  .grid2 { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--s28); }
 }
 @media (max-width: 767px) {
-  section { padding-block: var(--sp-700); }
-  .hero { padding-top: var(--sp-600); }
-  .stack { padding: var(--sp-200); border-radius: 24px; margin-top: var(--sp-600); }
-  .creds { grid-template-columns: 1fr; }
-  .head { margin-bottom: var(--sp-500); }
-  .btn.lg-m { width: 100%; }
-  .faq summary { font-size: 18px; line-height: 26px; }
+  :root { --section: 72px; }
+  .proj { grid-template-columns: 112px minmax(0, 1fr); }
+  .creds { grid-template-columns: 1fr; gap: var(--s16); }
+  .hero-actions .btn { width: 100%; }
+  .faq summary { font-size: 17px; }
   .faq .ans { padding-right: 0; }
+  .cta-cell h3 { font-size: 24px; }
+  .sec-head { margin-bottom: var(--s28); }
+  .band .btn { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition-property: opacity, color, background-color, border-color !important; transition-duration: 200ms !important; animation: none !important; }
+  *, *::before, *::after { transition-property: opacity, color, background-color !important; transition-duration: 200ms !important; animation: none !important; }
   .js .reveal { transform: none; }
-  .stack { transform: none; }
   .js .tagline-text .w { opacity: 1; }
   .panel > * { transform: none; }
-}
-@media (prefers-reduced-transparency: reduce) {
-  .nav, .panel { background: #0a1424; -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
 </style>
 </head>
@@ -303,30 +289,30 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
     <symbol id="i-design" viewBox="0 0 24 24"><path d="M4 20l1-5L16.5 3.5a2.1 2.1 0 013 3L8 18l-4 2z"/><path d="M14 6l4 4"/></symbol>
     <symbol id="i-audit" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9z"/><path d="M9 14l2 2 4-4"/></symbol>
     <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 00-5 5L3 18l3 3 6.5-6.5a4 4 0 005-5l-2.5 2.5-2.5-.5-.5-2.5z"/></symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 17a8 8 0 1116 0"/><path d="M12 17l4-6"/><circle cx="12" cy="17" r="1"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
-    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
-    <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
     <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
-    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17v.01"/></symbol>
     <symbol id="i-building" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h2M13 8h2M9 12h2M13 12h2M10 21v-4h4v4"/></symbol>
-    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 00-5 5L3 18l3 3 6.5-6.5a4 4 0 005-5l-2.5 2.5-2.5-.5-.5-2.5z"/></symbol>
-    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M4 17a8 8 0 1116 0"/><path d="M12 17l4-6"/><circle cx="12" cy="17" r="1"/></symbol>
-    <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></symbol>
   </defs>
 </svg>
 
 <header class="nav" id="nav">
   <div class="nav-in">
-    <a class="brand" href="#top" aria-label="Nam Hoàng Controls, về đầu trang"><img class="logo" src="images/logo.jpg" alt="" width="32" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="brand-mark" style="display:none">NH</span><span>Nam Hoàng Controls</span></a>
+    <a class="brand" href="#top" aria-label="Nam Hoàng Controls, về đầu trang">
+      <img class="logo" src="images/logo.jpg" alt="" width="36" height="36" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="brand-mark" style="display:none">NH</span>
+      <span class="brand-text"><span class="brand-name">Nam Hoàng Controls</span><span class="brand-slogan">Building Efficiency</span></span>
+    </a>
     <nav class="nav-links" aria-label="Điều hướng chính">
       <a href="#khoa-hoc">Khóa học</a>
       <a href="#lo-trinh">Cách học</a>
       <a href="#giang-vien">Giảng viên</a>
+      <a href="#du-an">Dự án</a>
       <a href="#faq">Câu hỏi</a>
-      <a class="btn sm" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký tư vấn</a>
+      <a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký tư vấn <span aria-hidden="true">→</span></a>
     </nav>
     <button class="menu-toggle" id="menuBtn" aria-expanded="false" aria-controls="panel" aria-label="Mở menu"><span></span><span></span></button>
   </div>
@@ -335,60 +321,36 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
   <a href="#khoa-hoc">Khóa học</a>
   <a href="#lo-trinh">Cách học</a>
   <a href="#giang-vien">Giảng viên</a>
+  <a href="#du-an">Dự án</a>
   <a href="#faq">Câu hỏi</a>
-  <a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký tư vấn khóa học</a>
+  <a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký tư vấn <span aria-hidden="true">→</span></a>
 </nav>
 
 <main id="main">
   <!-- HERO -->
-  <section class="hero dark" id="top">
+  <section class="hero deep" id="top">
+    <div class="hero-bg" aria-hidden="true"><img src="images/hero-bms.jpg" alt="" onerror="this.remove()"></div>
     <div class="wrap">
       <div class="hero-copy">
-        <span class="eyebrow">Khóa học BMS và HVAC thực chiến</span>
-        <h1 class="display">Làm chủ BMS từ bản vẽ đến dòng lệnh.</h1>
+        <span class="mono-label">Khóa học BMS và HVAC thực chiến</span>
+        <h1>Làm chủ BMS từ bản vẽ đến dòng lệnh.</h1>
         <p class="lead">Năm khóa thực chiến từ thiết kế, tư vấn giám sát, lập trình đến vận hành bảo trì và nâng cao HVAC &amp; BMS, do chuyên gia có 15 năm làm các dự án như Landmark 81, VCB Tower và VNG Data Center giảng dạy.</p>
         <div class="hero-actions">
-          <a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký tư vấn khóa học</a>
-          <a class="link" href="#khoa-hoc">Xem ba khóa học <svg class="icon sm" aria-hidden="true"><use href="#i-chev"/></svg></a>
+          <a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký tư vấn <span aria-hidden="true">→</span></a>
         </div>
-      </div>
-
-      <div class="stack" id="stack" aria-label="Kiến trúc BMS ba tầng">
-        <div class="stack-label">
-          <span class="eyebrow">Một hệ thống BMS, ba tầng</span>
-          <span class="small muted">Các khóa học đi qua cả ba tầng</span>
-        </div>
-        <div class="tiers">
-          <div class="tier t-green">
-            <span class="dot" aria-hidden="true"></span>
-            <span class="tag">Tầng hiện trường</span>
-            <h3 class="h4">Thiết bị và cảm biến</h3>
-            <p class="small muted">Cảm biến, van, damper, biến tần.</p>
-            <div class="chips"><span class="chip">Chiller</span><span class="chip">AHU</span><span class="chip">Bơm</span></div>
-          </div>
-          <div class="tier t-gold">
-            <span class="dot" aria-hidden="true"></span>
-            <span class="tag">Tầng điều khiển</span>
-            <h3 class="h4">Bộ DDC và logic SOO</h3>
-            <p class="small muted">PID, lịch vận hành, reset setpoint, alarm.</p>
-            <div class="chips"><span class="chip">DDC</span><span class="chip">SOO</span></div>
-          </div>
-          <div class="tier t-teal">
-            <span class="dot" aria-hidden="true"></span>
-            <span class="tag">Tầng quản lý</span>
-            <h3 class="h4">Niagara N4 và EMS</h3>
-            <p class="small muted">Dashboard, trend log, báo cáo năng lượng.</p>
-            <div class="chips"><span class="chip">BACnet</span><span class="chip">Modbus</span></div>
-          </div>
+        <div class="proof">
+          <span><i class="dot" aria-hidden="true"></i>15+ năm thực chiến</span>
+          <span><i class="dot" aria-hidden="true"></i>Khai giảng hàng tuần</span>
+          <span><i class="dot" aria-hidden="true"></i>Online hoặc offline</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STATS + PROJECT NAMES -->
-  <section class="dark" style="padding-top:0" aria-label="Kinh nghiệm giảng viên">
+  <!-- STATS -->
+  <section class="stats paper" aria-label="Kinh nghiệm giảng viên">
     <div class="wrap">
-      <div class="stats reveal">
+      <div class="stats-grid reveal">
         <div class="stat"><b>15+</b><span>Năm thực chiến BMS và T&amp;C</span></div>
         <div class="stat"><b>10+</b><span>Năm chuyên sâu BMS hãng Honeywell</span></div>
         <div class="stat"><b>5+</b><span>Năm chuyên gia T&amp;C độc lập</span></div>
@@ -398,289 +360,210 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
   </section>
 
   <!-- PROBLEM -->
-  <section class="light" id="van-de">
-    <div class="wrap">
-      <div class="head reveal">
-        <span class="eyebrow">Vấn đề thường gặp</span>
-        <h2 class="h2">Hệ thống BMS thường lệch ở ba khâu.</h2>
+  <section class="dark" id="van-de">
+    <div class="wrap split">
+      <div class="sticky reveal">
+        <span class="mono-label">Vấn đề thường gặp</span>
+        <h2>Hệ thống BMS thường lệch ở ba khâu.</h2>
         <p class="lead">Lỗi hiếm khi nằm ở thiết bị. Nó bắt đầu từ cách thiết kế, cách giám sát và cách lập trình.</p>
       </div>
-      <div class="problems reveal">
-        <article class="problem"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><h3 class="h4">Thiết kế</h3><p class="muted">Point list và SOO viết chung chung, nên mỗi nhà thầu hiểu một kiểu và chỉ phát hiện lệch khi đã lắp xong.</p></article>
-        <article class="problem"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><h3 class="h4">Giám sát</h3><p class="muted">Nghiệm thu chỉ test cho có, thiếu checklist theo từng bước T&amp;C nên lỗi logic nằm lại trong hệ thống.</p></article>
-        <article class="problem"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg><h3 class="h4">Lập trình</h3><p class="muted">Logic DDC chạy được nhưng khó bảo trì, khó đọc lại và chưa khai thác hết khả năng tiết kiệm năng lượng.</p></article>
+      <div class="rows reveal">
+        <div class="row"><span class="n">01</span><div><h3>Thiết kế</h3><p>Point list và SOO viết chung chung, nên mỗi nhà thầu hiểu một kiểu và chỉ phát hiện lệch khi đã lắp xong.</p></div></div>
+        <div class="row"><span class="n">02</span><div><h3>Giám sát</h3><p>Nghiệm thu chỉ test cho có, thiếu checklist theo từng bước T&amp;C nên lỗi logic nằm lại trong hệ thống.</p></div></div>
+        <div class="row"><span class="n">03</span><div><h3>Lập trình</h3><p>Logic DDC chạy được nhưng khó bảo trì, khó đọc lại và chưa khai thác hết khả năng tiết kiệm năng lượng.</p></div></div>
       </div>
     </div>
   </section>
 
   <!-- COURSES -->
-  <section class="light" id="khoa-hoc" style="padding-top:0">
+  <section class="dark" id="khoa-hoc" style="padding-top:0">
     <div class="wrap">
-      <div class="head reveal">
-        <span class="eyebrow">Năm khóa học</span>
-        <h2 class="h2">Chọn khóa theo vai trò của bạn.</h2>
-        <p class="lead">Mỗi khóa phục vụ một vai trò trong dự án BMS. Giáo trình dưới đây là bản dự kiến, buổi tư vấn sẽ chốt theo trình độ và mục tiêu của bạn.</p>
+      <div class="sec-head reveal">
+        <span class="mono-label">Năm khóa học</span>
+        <h2>Chọn khóa theo vai trò của bạn.</h2>
+        <p class="lead">Mỗi khóa phục vụ một vai trò trong vòng đời hệ thống BMS. Giáo trình dưới đây là bản dự kiến, buổi tư vấn sẽ chốt theo trình độ và mục tiêu của bạn.</p>
       </div>
-      <div class="subhead reveal">
-        <span class="eyebrow">Theo vai trò trong dự án</span>
-        <h3 class="h3">Thiết kế, giám sát và lập trình.</h3>
-      </div>
-      <div class="courses reveal">
-        <article class="course" aria-labelledby="k1">
-          <div class="media">
-            <svg class="icon" aria-hidden="true"><use href="#i-design"/></svg>
-            <img src="images/khoa-01-thiet-ke-bms.jpg" alt="Học viên khóa Thiết kế BMS đọc sơ đồ nguyên lý và point list" loading="lazy" onerror="this.remove()">
-          </div>
-          <div class="body">
-            <div class="kicker"><span class="num-label">Khóa 01</span><span class="badge b-teal">10 buổi</span></div>
-            <div style="display:flex;flex-direction:column;gap:var(--sp-75)">
-              <h3 class="h3" id="k1">Thiết kế BMS</h3>
-              <p class="muted">Từ sơ đồ nguyên lý HVAC đến bộ hồ sơ BMS rõ ràng để nhà thầu làm đúng ngay lần đầu.</p>
-            </div>
-            <ul class="syl">
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Kiến trúc BMS ba tầng và chọn giao thức</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Lập point list từ sơ đồ nguyên lý</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Chọn cảm biến, van, actuator và tủ DDC</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Viết SOO cho chiller, AHU và bơm</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Review bản vẽ và hồ sơ thiết kế BMS</li>
-            </ul>
-            <p class="who">Dành cho <b>kỹ sư thiết kế M&amp;E, tư vấn thiết kế</b></p>
-            <dl class="specs">
-              <div><dt>Số buổi</dt><dd>10 buổi</dd></div>
-              <div><dt>Khai giảng</dt><dd>Hàng tuần</dd></div>
-              <div><dt>Hình thức</dt><dd>Online hoặc offline</dd></div>
-            </dl>
-            <div class="actions"><a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký khóa này</a></div>
-          </div>
-        </article>
-
-        <article class="course" aria-labelledby="k2">
-          <div class="media">
-            <svg class="icon" aria-hidden="true"><use href="#i-audit"/></svg>
-            <img src="images/khoa-02-tu-van-giam-sat-bms.jpg" alt="Kỹ sư giám sát kiểm tra tủ điều khiển BMS tại công trình" loading="lazy" onerror="this.remove()">
-          </div>
-          <div class="body">
-            <div class="kicker"><span class="num-label">Khóa 02</span><span class="badge b-gold">10 buổi</span></div>
-            <div style="display:flex;flex-direction:column;gap:var(--sp-75)">
-              <h3 class="h3" id="k2">Tư vấn giám sát BMS</h3>
-              <p class="muted">Kiểm tra, test và nghiệm thu hệ thống theo quy trình T&amp;C để bảo vệ quyền lợi chủ đầu tư.</p>
-            </div>
-            <ul class="syl">
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Sáu bước T&amp;C từ CxL0 đến L6</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Review hồ sơ trình duyệt và SOO</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Lập kế hoạch và checklist T&amp;C</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Test I/O và functional test theo SOO</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Ghi nhận lỗi, báo cáo và bàn giao hồ sơ</li>
-            </ul>
-            <p class="who">Dành cho <b>kỹ sư giám sát, ban quản lý dự án, kỹ sư trưởng</b></p>
-            <dl class="specs">
-              <div><dt>Số buổi</dt><dd>10 buổi</dd></div>
-              <div><dt>Khai giảng</dt><dd>Hàng tuần</dd></div>
-              <div><dt>Hình thức</dt><dd>Online hoặc offline</dd></div>
-            </dl>
-            <div class="actions"><a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký khóa này</a></div>
-          </div>
-        </article>
-
-        <article class="course" aria-labelledby="k3">
-          <div class="media">
-            <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>
-            <img src="images/khoa-03-lap-trinh-bms.jpg" alt="Màn hình lập trình logic DDC cho hệ thống BMS" loading="lazy" onerror="this.remove()">
-          </div>
-          <div class="body">
-            <div class="kicker"><span class="num-label">Khóa 03</span><span class="badge b-green">12 buổi</span></div>
-            <div style="display:flex;flex-direction:column;gap:var(--sp-75)">
-              <h3 class="h3" id="k3">Lập trình BMS</h3>
-              <p class="muted">Biến SOO thành logic DDC rõ ràng, dễ bảo trì, có alarm, trend và tối ưu năng lượng.</p>
-            </div>
-            <ul class="syl">
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Logic DDC và chuyển SOO thành chương trình</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>PID, lịch vận hành, reset setpoint</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Alarm, trend log và đồ họa giám sát</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Tích hợp Modbus, BACnet, SQL</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Dò lỗi logic trên hệ thống đang chạy</li>
-            </ul>
-            <p class="who">Dành cho <b>kỹ sư tích hợp, lập trình, vận hành BMS</b></p>
-            <dl class="specs">
-              <div><dt>Số buổi</dt><dd>12 buổi</dd></div>
-              <div><dt>Khai giảng</dt><dd>Hàng tuần</dd></div>
-              <div><dt>Hình thức</dt><dd>Online hoặc offline</dd></div>
-            </dl>
-            <div class="actions"><a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký khóa này</a></div>
-          </div>
-        </article>
-      </div>
-
-      <div class="subhead reveal" style="margin-top:var(--sp-700)">
-        <span class="eyebrow">Vận hành và nâng cao</span>
-        <h3 class="h3">Cho đội vận hành và kỹ sư muốn đi sâu hơn.</h3>
-      </div>
-      <div class="courses two reveal">
-        <article class="course" aria-labelledby="k4">
-          <div class="media">
-            <svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg>
-            <img src="images/khoa-04-van-hanh-bao-tri.jpg" alt="Kỹ thuật viên vận hành và bảo trì hệ thống BMS trong tòa nhà" loading="lazy" onerror="this.remove()">
-          </div>
-          <div class="body">
-            <div class="kicker"><span class="num-label">Khóa 04</span><span class="badge b-navy">7 buổi</span></div>
-            <div style="display:flex;flex-direction:column;gap:var(--sp-75)">
-              <h3 class="h3" id="k4">Vận hành và bảo trì tòa nhà</h3>
-              <p class="muted">Vận hành hệ thống HVAC và BMS ổn định, phát hiện sớm và xử lý sự cố ngay tại hiện trường.</p>
-            </div>
-            <ul class="syl">
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Hệ thống HVAC và BMS trong tòa nhà</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Đọc giao diện BMS: alarm, trend, lịch vận hành</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Kiểm tra định kỳ I/O, DDC, truyền thông</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Phân tích alarm và khoanh vùng sự cố hiện trường</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Lập kế hoạch và checklist bảo trì</li>
-            </ul>
-            <p class="who">Dành cho <b>kỹ thuật viên vận hành, bảo trì, quản lý tòa nhà</b></p>
-            <dl class="specs">
-              <div><dt>Số buổi</dt><dd>7 buổi</dd></div>
-              <div><dt>Khai giảng</dt><dd>Hàng tuần</dd></div>
-              <div><dt>Hình thức</dt><dd>Online hoặc offline</dd></div>
-            </dl>
-            <div class="actions"><a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký khóa này</a></div>
-          </div>
-        </article>
-
-        <article class="course" aria-labelledby="k5">
-          <div class="media">
-            <svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg>
-            <img src="images/khoa-05-nang-cao-hvac-bms.jpg" alt="Phân tích dữ liệu vận hành chiller và AHU trên hệ thống BMS" loading="lazy" onerror="this.remove()">
-          </div>
-          <div class="body">
-            <div class="kicker"><span class="num-label">Khóa nâng cao</span><span class="badge b-ink">15 buổi</span></div>
-            <div style="display:flex;flex-direction:column;gap:var(--sp-75)">
-              <h3 class="h3" id="k5">Nâng cao: HVAC &amp; BMS</h3>
-              <p class="muted">Khai thác dữ liệu BMS để tìm điểm thất thoát năng lượng và hiệu chỉnh logic điều khiển, không đánh đổi tiện nghi.</p>
-            </div>
-            <ul class="syl">
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Nguyên lý và chiến lược điều khiển chiller, AHU, bơm</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Khảo sát hiện trạng và phân tích trend log</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Đánh giá hiệu suất, xác định điểm thất thoát năng lượng</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Tinh chỉnh setpoint, reset nhiệt độ, áp suất, lịch vận hành</li>
-              <li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Báo cáo định lượng mức tiết kiệm sau tối ưu</li>
-            </ul>
-            <p class="who">Dành cho <b>kỹ sư đã có nền tảng HVAC và BMS, kỹ sư trưởng, quản lý kỹ thuật</b></p>
-            <dl class="specs">
-              <div><dt>Số buổi</dt><dd>15 buổi</dd></div>
-              <div><dt>Khai giảng</dt><dd>Hàng tuần</dd></div>
-              <div><dt>Hình thức</dt><dd>Online hoặc offline</dd></div>
-            </dl>
-            <div class="actions"><a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký khóa này</a></div>
-          </div>
-        </article>
+      <div class="grid2 reveal">
+<article class="card course" aria-labelledby="k1">
+  <div class="media"><svg class="icon" aria-hidden="true"><use href="#i-design"/></svg><img src="images/khoa-01-thiet-ke-bms.jpg" alt="Học viên khóa Thiết kế BMS đọc sơ đồ nguyên lý và point list" loading="lazy" onerror="this.remove()"></div>
+  <div class="body">
+    <div class="kicker"><span class="mono-label">Khóa 01</span><span class="pill">10 buổi</span></div>
+    <div class="stack-8"><h3 id="k1">Thiết kế BMS</h3><p class="muted">Từ sơ đồ nguyên lý HVAC đến bộ hồ sơ BMS rõ ràng để nhà thầu làm đúng ngay lần đầu.</p></div>
+    <ul class="syl"><li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Kiến trúc BMS ba tầng và chọn giao thức</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Lập point list từ sơ đồ nguyên lý</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Chọn cảm biến, van, actuator và tủ DDC</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Viết SOO cho chiller, AHU và bơm</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Review bản vẽ và hồ sơ thiết kế BMS</li></ul>
+    <p class="who">Dành cho <b>kỹ sư thiết kế M&amp;E, tư vấn thiết kế</b></p>
+    <dl class="specs"><div><dt>Số buổi</dt><dd>10 buổi</dd></div><div><dt>Khai giảng</dt><dd>Hàng tuần</dd></div><div><dt>Hình thức</dt><dd>Online hoặc offline</dd></div></dl>
+    <div class="actions"><a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký khóa này <span aria-hidden="true">→</span></a></div>
+  </div>
+</article>
+<article class="card course" aria-labelledby="k2">
+  <div class="media"><svg class="icon" aria-hidden="true"><use href="#i-audit"/></svg><img src="images/khoa-02-tu-van-giam-sat-bms.jpg" alt="Kỹ sư giám sát kiểm tra tủ điều khiển BMS tại công trình" loading="lazy" onerror="this.remove()"></div>
+  <div class="body">
+    <div class="kicker"><span class="mono-label">Khóa 02</span><span class="pill">10 buổi</span></div>
+    <div class="stack-8"><h3 id="k2">Tư vấn giám sát BMS</h3><p class="muted">Kiểm tra, test và nghiệm thu hệ thống theo quy trình T&amp;C để bảo vệ quyền lợi chủ đầu tư.</p></div>
+    <ul class="syl"><li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Sáu bước T&amp;C từ CxL0 đến L6</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Review hồ sơ trình duyệt và SOO</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Lập kế hoạch và checklist T&amp;C</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Test I/O và functional test theo SOO</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Ghi nhận lỗi, báo cáo và bàn giao hồ sơ</li></ul>
+    <p class="who">Dành cho <b>kỹ sư giám sát, ban quản lý dự án, kỹ sư trưởng</b></p>
+    <dl class="specs"><div><dt>Số buổi</dt><dd>10 buổi</dd></div><div><dt>Khai giảng</dt><dd>Hàng tuần</dd></div><div><dt>Hình thức</dt><dd>Online hoặc offline</dd></div></dl>
+    <div class="actions"><a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký khóa này <span aria-hidden="true">→</span></a></div>
+  </div>
+</article>
+<article class="card course" aria-labelledby="k3">
+  <div class="media"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg><img src="images/khoa-03-lap-trinh-bms.jpg" alt="Màn hình lập trình logic DDC cho hệ thống BMS" loading="lazy" onerror="this.remove()"></div>
+  <div class="body">
+    <div class="kicker"><span class="mono-label">Khóa 03</span><span class="pill">12 buổi</span></div>
+    <div class="stack-8"><h3 id="k3">Lập trình BMS</h3><p class="muted">Biến SOO thành logic DDC rõ ràng, dễ bảo trì, có alarm, trend và tối ưu năng lượng.</p></div>
+    <ul class="syl"><li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Logic DDC và chuyển SOO thành chương trình</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>PID, lịch vận hành, reset setpoint</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Alarm, trend log và đồ họa giám sát</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Tích hợp Modbus, BACnet, SQL</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Dò lỗi logic trên hệ thống đang chạy</li></ul>
+    <p class="who">Dành cho <b>kỹ sư tích hợp, lập trình, vận hành BMS</b></p>
+    <dl class="specs"><div><dt>Số buổi</dt><dd>12 buổi</dd></div><div><dt>Khai giảng</dt><dd>Hàng tuần</dd></div><div><dt>Hình thức</dt><dd>Online hoặc offline</dd></div></dl>
+    <div class="actions"><a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký khóa này <span aria-hidden="true">→</span></a></div>
+  </div>
+</article>
+<article class="card course" aria-labelledby="k4">
+  <div class="media"><svg class="icon" aria-hidden="true"><use href="#i-wrench"/></svg><img src="images/khoa-04-van-hanh-bao-tri.jpg" alt="Kỹ thuật viên vận hành và bảo trì hệ thống BMS trong tòa nhà" loading="lazy" onerror="this.remove()"></div>
+  <div class="body">
+    <div class="kicker"><span class="mono-label">Khóa 04</span><span class="pill">7 buổi</span></div>
+    <div class="stack-8"><h3 id="k4">Vận hành và bảo trì tòa nhà</h3><p class="muted">Vận hành hệ thống HVAC và BMS ổn định, phát hiện sớm và xử lý sự cố ngay tại hiện trường.</p></div>
+    <ul class="syl"><li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Hệ thống HVAC và BMS trong tòa nhà</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Đọc giao diện BMS: alarm, trend, lịch vận hành</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Kiểm tra định kỳ I/O, DDC, truyền thông</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Phân tích alarm và khoanh vùng sự cố hiện trường</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Lập kế hoạch và checklist bảo trì</li></ul>
+    <p class="who">Dành cho <b>kỹ thuật viên vận hành, bảo trì, quản lý tòa nhà</b></p>
+    <dl class="specs"><div><dt>Số buổi</dt><dd>7 buổi</dd></div><div><dt>Khai giảng</dt><dd>Hàng tuần</dd></div><div><dt>Hình thức</dt><dd>Online hoặc offline</dd></div></dl>
+    <div class="actions"><a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký khóa này <span aria-hidden="true">→</span></a></div>
+  </div>
+</article>
+<article class="card course" aria-labelledby="k5">
+  <div class="media"><svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg><img src="images/khoa-05-nang-cao-hvac-bms.jpg" alt="Phân tích dữ liệu vận hành chiller và AHU trên hệ thống BMS" loading="lazy" onerror="this.remove()"></div>
+  <div class="body">
+    <div class="kicker"><span class="mono-label">Khóa nâng cao</span><span class="pill">15 buổi</span></div>
+    <div class="stack-8"><h3 id="k5">Nâng cao: HVAC &amp; BMS</h3><p class="muted">Khai thác dữ liệu BMS để tìm điểm thất thoát năng lượng và hiệu chỉnh logic điều khiển, không đánh đổi tiện nghi.</p></div>
+    <ul class="syl"><li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Nguyên lý và chiến lược điều khiển chiller, AHU, bơm</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Khảo sát hiện trạng và phân tích trend log</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Đánh giá hiệu suất, xác định điểm thất thoát năng lượng</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Tinh chỉnh setpoint, reset nhiệt độ, áp suất, lịch vận hành</li>
+<li><svg class="icon sm" aria-hidden="true"><use href="#i-check"/></svg>Báo cáo định lượng mức tiết kiệm sau tối ưu</li></ul>
+    <p class="who">Dành cho <b>kỹ sư đã có nền tảng HVAC và BMS, kỹ sư trưởng, quản lý kỹ thuật</b></p>
+    <dl class="specs"><div><dt>Số buổi</dt><dd>15 buổi</dd></div><div><dt>Khai giảng</dt><dd>Hàng tuần</dd></div><div><dt>Hình thức</dt><dd>Online hoặc offline</dd></div></dl>
+    <div class="actions"><a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký khóa này <span aria-hidden="true">→</span></a></div>
+  </div>
+</article>
+<article class="card cta-cell">
+  <span class="mono-label">Chưa chắc chọn khóa nào?</span>
+  <h3>Gửi vai trò và mục tiêu, chúng tôi gợi ý khóa phù hợp.</h3>
+  <p>Buổi tư vấn giúp bạn chọn đúng khóa trước khi quyết định đăng ký.</p>
+  <a class="btn dark" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký tư vấn <span aria-hidden="true">→</span></a>
+</article>
       </div>
     </div>
   </section>
 
   <!-- TAGLINE REVEAL -->
-  <section class="dark tagline" aria-label="Thông điệp">
+  <section class="deep" aria-label="Thông điệp">
     <div class="wrap">
       <p class="tagline-text" id="tagline">Thiết kế đúng. Giám sát đúng. Lập trình đúng. Đó là ba bước để một hệ thống BMS vận hành ổn định và tiết kiệm năng lượng thật sự.</p>
     </div>
   </section>
 
   <!-- STEPS -->
-  <section class="light" id="lo-trinh">
-    <div class="wrap">
-      <div class="head reveal">
-        <span class="eyebrow">Cách học</span>
-        <h2 class="h2">Ba bước từ đăng ký đến chứng chỉ.</h2>
+  <section class="paper" id="lo-trinh">
+    <div class="wrap split">
+      <div class="sticky reveal">
+        <span class="mono-label">Cách học</span>
+        <h2>Ba bước từ đăng ký đến chứng chỉ.</h2>
+        <a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký tư vấn <span aria-hidden="true">→</span></a>
       </div>
-      <div class="steps reveal">
-        <article class="step"><span class="n">1</span><h3 class="h4">Tư vấn chọn khóa</h3><p class="muted">Bạn gửi vai trò và mục tiêu qua form. Chúng tôi gợi ý khóa phù hợp trước khi bạn quyết định.</p></article>
-        <article class="step"><span class="n">2</span><h3 class="h4">Học theo tình huống dự án</h3><p class="muted">Nội dung đi từ HVAC cơ bản, logic DDC và SOO đến T&amp;C, làm việc trên mẫu SOO, MOS và checklist chuẩn hóa.</p></article>
-        <article class="step"><span class="n">3</span><h3 class="h4">Nhận chứng chỉ theo cấp độ</h3><p class="muted">Hoàn thành khóa, bạn nhận chứng chỉ hoàn thành theo cấp độ tương ứng với vai trò của mình.</p></article>
+      <div class="rows reveal">
+        <div class="row"><span class="n">01</span><div><h3>Tư vấn chọn khóa</h3><p>Bạn gửi vai trò và mục tiêu qua form. Chúng tôi gợi ý khóa phù hợp trước khi bạn quyết định.</p></div></div>
+        <div class="row"><span class="n">02</span><div><h3>Học theo tình huống dự án</h3><p>Nội dung đi từ HVAC cơ bản, logic DDC và SOO đến T&amp;C, làm việc trên mẫu SOO, MOS và checklist chuẩn hóa.</p></div></div>
+        <div class="row"><span class="n">03</span><div><h3>Nhận chứng chỉ theo cấp độ</h3><p>Hoàn thành khóa, bạn nhận chứng chỉ hoàn thành theo cấp độ tương ứng với vai trò của mình.</p></div></div>
       </div>
     </div>
   </section>
 
   <!-- INSTRUCTOR -->
   <section class="dark" id="giang-vien">
-    <div class="wrap expert">
+    <div class="wrap split" style="align-items:center">
       <figure class="media portrait reveal">
         <span class="mono" aria-hidden="true">NH</span>
         <img src="images/giang-vien-nam-hoang.jpg" alt="Kỹ sư Nam Hoàng, giảng viên các khóa BMS" loading="lazy" onerror="this.remove()">
       </figure>
       <div class="expert-copy reveal">
-        <span class="eyebrow">Giảng viên</span>
-        <h2 class="h2">Nam Hoàng, chuyên gia BMS và T&amp;C.</h2>
+        <span class="mono-label">Giảng viên</span>
+        <h2>Nam Hoàng, chuyên gia BMS và T&amp;C.</h2>
         <p class="lead">Với 15 năm gắn bó cùng hệ thống chiller, HVAC và tự động hóa, tôi trực tiếp cấu hình, khắc phục lỗi và giám sát nghiệm thu cho các dự án đòi hỏi độ chính xác cao như trung tâm dữ liệu, nhà máy công nghệ và sân bay quốc tế.</p>
         <div class="creds">
           <div><b>15+</b><span>Năm thực chiến</span></div>
           <div><b>10+</b><span>Năm BMS hãng Honeywell</span></div>
           <div><b>5+</b><span>Năm T&amp;C độc lập</span></div>
         </div>
-        <a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký tư vấn khóa học</a>
+        <a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký tư vấn <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section class="light" id="du-an" style="padding-bottom:var(--sp-800)">
-    <div class="wrap proj-head reveal">
-      <div style="display:flex;flex-direction:column;gap:var(--sp-100)">
-        <span class="eyebrow">Dự án đã tham gia</span>
-        <h2 class="h2">Bài giảng đến từ công trình thật.</h2>
-      </div>
-      <div class="arrows">
-        <button class="arrow" id="prev" aria-label="Dự án trước"><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg></button>
-        <button class="arrow" id="next" aria-label="Dự án tiếp theo"><svg class="icon" aria-hidden="true"><use href="#i-chev"/></svg></button>
-      </div>
-    </div>
-    <div class="rail" id="rail" tabindex="0" aria-label="Danh sách dự án tiêu biểu">
-      <article class="proj"><div class="media"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg><img src="images/du-an-hyatt-da-nang.jpg" alt="Resort Hyatt Đà Nẵng" loading="lazy" onerror="this.remove()"></div><div class="body"><span class="tag">Nghỉ dưỡng</span><h3 class="title h4">Resort Hyatt Đà Nẵng</h3><p class="muted small">BMS, HVAC</p></div></article>
-      <article class="proj"><div class="media"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg><img src="images/du-an-landmark-81.jpg" alt="Landmark 81" loading="lazy" onerror="this.remove()"></div><div class="body"><span class="tag">Khách sạn và thương mại</span><h3 class="title h4">Landmark 81</h3><p class="muted small">Tích hợp hệ thống</p></div></article>
-      <article class="proj"><div class="media"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg><img src="images/du-an-vcb-tower.jpg" alt="VCB Tower" loading="lazy" onerror="this.remove()"></div><div class="body"><span class="tag">Cao ốc văn phòng</span><h3 class="title h4">VCB Tower</h3><p class="muted small">BMS, chiếu sáng</p></div></article>
-      <article class="proj"><div class="media"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg><img src="images/du-an-san-bay-phu-quoc.jpg" alt="Sân bay quốc tế Phú Quốc" loading="lazy" onerror="this.remove()"></div><div class="body"><span class="tag">Hàng không</span><h3 class="title h4">Sân bay quốc tế Phú Quốc</h3><p class="muted small">SCADA</p></div></article>
-      <article class="proj"><div class="media"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg><img src="images/du-an-vng-data-center.jpg" alt="VNG Data Center" loading="lazy" onerror="this.remove()"></div><div class="body"><span class="tag">Trung tâm dữ liệu</span><h3 class="title h4">VNG Data Center</h3><p class="muted small">iBMS, T&amp;C</p></div></article>
-      <article class="proj"><div class="media"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg><img src="images/du-an-lego-viet-nam.jpg" alt="Nhà máy Lego Việt Nam" loading="lazy" onerror="this.remove()"></div><div class="body"><span class="tag">Công nghiệp</span><h3 class="title h4">Nhà máy Lego Việt Nam</h3><p class="muted small">T&amp;C, điều khiển</p></div></article>
-    </div>
-  </section>
-
-  <!-- ASSURANCE -->
-  <section class="light" style="padding-top:0">
+  <section class="deep" id="du-an">
     <div class="wrap">
-      <ul class="assure reveal">
-        <li><svg class="icon" aria-hidden="true"><use href="#i-person"/></svg><h3 class="h4">Tư vấn theo vai trò</h3><p class="muted">Bạn nói vai trò và trình độ hiện tại, chúng tôi gợi ý khóa phù hợp trước khi bạn đăng ký.</p></li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><h3 class="h4">Khai giảng hàng tuần</h3><p class="muted">Học online hoặc offline, chọn hình thức phù hợp với lịch làm việc của bạn.</p></li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-audit"/></svg><h3 class="h4">Nội dung theo đối tượng</h3><p class="muted">Chương trình điều chỉnh cho kỹ thuật bảo trì, giám sát hoặc kỹ sư trưởng theo nhu cầu thực tế tại dự án.</p></li>
-      </ul>
+      <div class="sec-head reveal">
+        <span class="mono-label">Dự án đã tham gia</span>
+        <h2>Bài giảng đến từ công trình thật.</h2>
+      </div>
+      <div class="grid2">
+<article class="card proj reveal"><div class="media"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg><img src="images/du-an-hyatt-da-nang.jpg" alt="Resort Hyatt Đà Nẵng" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="mono-label">Nghỉ dưỡng</span><h3>Resort Hyatt Đà Nẵng</h3><p class="muted small">BMS, HVAC</p></div></article>
+<article class="card proj reveal"><div class="media"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg><img src="images/du-an-landmark-81.jpg" alt="Landmark 81" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="mono-label">Khách sạn và thương mại</span><h3>Landmark 81</h3><p class="muted small">Tích hợp hệ thống</p></div></article>
+<article class="card proj reveal"><div class="media"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg><img src="images/du-an-vcb-tower.jpg" alt="VCB Tower" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="mono-label">Cao ốc văn phòng</span><h3>VCB Tower</h3><p class="muted small">BMS, chiếu sáng</p></div></article>
+<article class="card proj reveal"><div class="media"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg><img src="images/du-an-san-bay-phu-quoc.jpg" alt="Sân bay quốc tế Phú Quốc" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="mono-label">Hàng không</span><h3>Sân bay quốc tế Phú Quốc</h3><p class="muted small">SCADA</p></div></article>
+<article class="card proj reveal"><div class="media"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg><img src="images/du-an-vng-data-center.jpg" alt="VNG Data Center" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="mono-label">Trung tâm dữ liệu</span><h3>VNG Data Center</h3><p class="muted small">iBMS, T&amp;C</p></div></article>
+<article class="card proj reveal"><div class="media"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg><img src="images/du-an-lego-viet-nam.jpg" alt="Nhà máy Lego Việt Nam" loading="lazy" onerror="this.remove()"></div><div class="pbody"><span class="mono-label">Công nghiệp</span><h3>Nhà máy Lego Việt Nam</h3><p class="muted small">T&amp;C, điều khiển</p></div></article>
+      </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="light" id="faq" style="padding-top:0">
-    <div class="wrap">
-      <div class="head reveal">
-        <span class="eyebrow">Câu hỏi thường gặp</span>
-        <h2 class="h2">Giải đáp trước khi bạn đăng ký.</h2>
+  <section class="paper" id="faq">
+    <div class="wrap split">
+      <div class="sticky reveal">
+        <span class="mono-label">Câu hỏi thường gặp</span>
+        <h2>Giải đáp trước khi bạn đăng ký.</h2>
+        <p class="lead">Không thấy câu trả lời bạn cần? Gửi câu hỏi qua form tư vấn.</p>
       </div>
       <div class="faq reveal">
-        <details><summary>Tôi nên chọn khóa nào?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Chọn theo vai trò. Thiết kế BMS dành cho kỹ sư thiết kế M&amp;E. Tư vấn giám sát BMS dành cho kỹ sư giám sát, ban quản lý dự án và kỹ sư trưởng. Lập trình BMS dành cho kỹ sư tích hợp. Vận hành và bảo trì tòa nhà dành cho kỹ thuật viên và quản lý tòa nhà. Khóa nâng cao HVAC &amp; BMS dành cho kỹ sư đã có nền tảng. Nếu chưa chắc, hãy đăng ký tư vấn để được gợi ý.</p></details>
-        <details><summary>Mỗi khóa học bao nhiêu buổi?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Thiết kế BMS 10 buổi, Tư vấn giám sát BMS 10 buổi, Lập trình BMS 12 buổi, Vận hành và bảo trì tòa nhà 7 buổi, Nâng cao HVAC &amp; BMS 15 buổi.</p></details>
-        <details><summary>Khi nào khai giảng và học hình thức nào?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Các khóa khai giảng hàng tuần. Bạn có thể học online hoặc offline.</p></details>
-        <details><summary>Tôi cần biết gì trước khi học?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Kiến thức HVAC cơ bản là lợi thế. Chương trình đào tạo của Nam Hoàng Controls có phần HVAC cơ bản, và tư vấn viên sẽ xác nhận mức độ phù hợp trước khi bạn đăng ký.</p></details>
-        <details><summary>Học phí là bao nhiêu?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Hãy đăng ký tư vấn qua form để nhận thông tin học phí phù hợp với khóa và hình thức học bạn chọn.</p></details>
-        <details><summary>Có chứng chỉ khi hoàn thành không?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Có. Học viên hoàn thành khóa nhận chứng chỉ hoàn thành theo cấp độ tương ứng.</p></details>
-        <details><summary>Ai là người giảng dạy?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Kỹ sư Nam Hoàng, người có 15 năm làm BMS và T&amp;C, trong đó hơn 10 năm chuyên sâu hệ thống Honeywell và hơn 5 năm làm chuyên gia T&amp;C độc lập.</p></details>
-        <details><summary>Công ty tôi muốn đào tạo cả nhóm thì sao?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Nội dung được điều chỉnh theo từng đối tượng và nhu cầu thực tế tại dự án. Hãy gửi yêu cầu qua form để được tư vấn chương trình phù hợp cho nhóm.</p></details>
-        <details><summary>Học xong tôi làm được gì?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Sau khóa Thiết kế, bạn lập được point list và SOO rõ ràng. Sau khóa Tư vấn giám sát, bạn xây dựng kế hoạch T&amp;C và kiểm tra nghiệm thu theo checklist. Sau khóa Lập trình, bạn viết và dò lỗi logic DDC từ SOO. Sau khóa Vận hành và bảo trì, bạn kiểm tra định kỳ và xử lý sự cố tại hiện trường. Sau khóa Nâng cao, bạn tìm điểm thất thoát năng lượng và hiệu chỉnh setpoint dựa trên dữ liệu.</p></details>
+<details><summary>Tôi nên chọn khóa nào?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Chọn theo vai trò. Thiết kế BMS dành cho kỹ sư thiết kế M&amp;E. Tư vấn giám sát BMS dành cho kỹ sư giám sát, ban quản lý dự án và kỹ sư trưởng. Lập trình BMS dành cho kỹ sư tích hợp. Vận hành và bảo trì tòa nhà dành cho kỹ thuật viên và quản lý tòa nhà. Khóa nâng cao HVAC &amp; BMS dành cho kỹ sư đã có nền tảng. Nếu chưa chắc, hãy đăng ký tư vấn để được gợi ý.</p></details>
+<details><summary>Mỗi khóa học bao nhiêu buổi?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Thiết kế BMS 10 buổi, Tư vấn giám sát BMS 10 buổi, Lập trình BMS 12 buổi, Vận hành và bảo trì tòa nhà 7 buổi, Nâng cao HVAC &amp; BMS 15 buổi.</p></details>
+<details><summary>Khi nào khai giảng và học hình thức nào?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Các khóa khai giảng hàng tuần. Bạn có thể học online hoặc offline.</p></details>
+<details><summary>Tôi cần biết gì trước khi học?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Kiến thức HVAC cơ bản là lợi thế. Chương trình đào tạo của Nam Hoàng Controls có phần HVAC cơ bản, và tư vấn viên sẽ xác nhận mức độ phù hợp trước khi bạn đăng ký.</p></details>
+<details><summary>Học phí là bao nhiêu?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Hãy đăng ký tư vấn qua form để nhận thông tin học phí phù hợp với khóa và hình thức học bạn chọn.</p></details>
+<details><summary>Có chứng chỉ khi hoàn thành không?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Có. Học viên hoàn thành khóa nhận chứng chỉ hoàn thành theo cấp độ tương ứng.</p></details>
+<details><summary>Ai là người giảng dạy?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Kỹ sư Nam Hoàng, người có 15 năm làm BMS và T&amp;C, trong đó hơn 10 năm chuyên sâu hệ thống Honeywell và hơn 5 năm làm chuyên gia T&amp;C độc lập.</p></details>
+<details><summary>Công ty tôi muốn đào tạo cả nhóm thì sao?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Nội dung được điều chỉnh theo từng đối tượng và nhu cầu thực tế tại dự án. Hãy gửi yêu cầu qua form để được tư vấn chương trình phù hợp cho nhóm.</p></details>
+<details><summary>Học xong tôi làm được gì?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary><p class="ans">Sau khóa Thiết kế, bạn lập được point list và SOO rõ ràng. Sau khóa Tư vấn giám sát, bạn xây dựng kế hoạch T&amp;C và kiểm tra nghiệm thu theo checklist. Sau khóa Lập trình, bạn viết và dò lỗi logic DDC từ SOO. Sau khóa Vận hành và bảo trì, bạn kiểm tra định kỳ và xử lý sự cố tại hiện trường. Sau khóa Nâng cao, bạn tìm điểm thất thoát năng lượng và hiệu chỉnh setpoint dựa trên dữ liệu.</p></details>
       </div>
     </div>
   </section>
 
-  <!-- CLOSE -->
-  <section class="dark close" id="dang-ky">
-    <div class="wrap">
-      <div class="inner reveal">
-        <span class="slogan">Building Efficiency</span>
-        <h2 class="h2">Chọn khóa BMS phù hợp với vai trò của bạn.</h2>
-        <p class="lead">Gửi vai trò và mục tiêu qua form. Chúng tôi liên hệ để tư vấn khóa học phù hợp.</p>
-        <a class="btn" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký tư vấn khóa học</a>
-        <div class="contact-row">
+  <!-- CLOSE BAND -->
+  <section class="band" id="dang-ky">
+    <div class="wrap band-in">
+      <div class="stack-8 reveal" style="gap:16px">
+        <span class="mono-label">Building Efficiency</span>
+        <h2>Chọn khóa BMS phù hợp với vai trò của bạn.</h2>
+        <p>Gửi vai trò và mục tiêu qua form. Chúng tôi liên hệ để tư vấn khóa học phù hợp.</p>
+      </div>
+      <div class="side reveal">
+        <a class="btn dark" href="https://forms.gle/Sp3T6HLyXEFQg8b99" target="_blank" rel="noopener">Đăng ký tư vấn <span aria-hidden="true">→</span></a>
+        <div class="contact">
           <span><svg class="icon sm" aria-hidden="true"><use href="#i-phone"/></svg>0905 54 55 64</span>
           <span><svg class="icon sm" aria-hidden="true"><use href="#i-mail"/></svg>nam.hoang@namhoangcontrols.com</span>
         </div>
@@ -689,16 +572,15 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
   </section>
 </main>
 
-<footer class="light">
+<footer class="deep">
   <div class="wrap">
     <div class="foot">
-      <div style="display:flex;flex-direction:column;gap:var(--sp-100)">
-        <span class="brand" style="color:var(--fg)"><img class="logo lg" src="images/logo.jpg" alt="" width="48" height="48" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="brand-mark" style="display:none">NH</span><span>Nam Hoàng Controls</span></span>
-        <span class="slogan">Building Efficiency</span>
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Về đầu trang"><img class="logo lg" src="images/logo.jpg" alt="" width="48" height="48" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="brand-mark" style="display:none">NH</span><span class="brand-text"><span class="brand-name">Nam Hoàng Controls</span><span class="brand-slogan">Building Efficiency</span></span></a>
         <p class="muted" style="max-width:360px">Đối tác kỹ thuật độc lập về giải pháp, đào tạo và tư vấn hệ thống BMS và T&amp;C cơ điện.</p>
       </div>
       <div>
-        <h4>Khóa học</h4>
+        <h4 class="h4">Khóa học</h4>
         <ul>
           <li><a href="#khoa-hoc">Thiết kế BMS</a></li>
           <li><a href="#khoa-hoc">Tư vấn giám sát BMS</a></li>
@@ -708,7 +590,7 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
         </ul>
       </div>
       <div>
-        <h4>Liên hệ</h4>
+        <h4 class="h4">Liên hệ</h4>
         <ul>
           <li><svg class="icon sm" aria-hidden="true"><use href="#i-pin"/></svg>302 Phan Văn Trị, Q. Bình Thạnh, TP.HCM</li>
           <li><svg class="icon sm" aria-hidden="true"><use href="#i-phone"/></svg>0905 54 55 64</li>
@@ -718,13 +600,12 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
         </ul>
       </div>
     </div>
-    <div class="foot-bottom"><span>© 2026 Nam Hoàng Controls. Bảo lưu mọi quyền.</span><a href="#top">Về đầu trang</a></div>
+    <div class="foot-bottom"><span>© 2026 Nam Hoàng Controls</span><a href="#top">Về đầu trang</a></div>
   </div>
 </footer>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Tôi nên chọn khóa nào?","acceptedAnswer":{"@type":"Answer","text":"Chọn theo vai trò: Thiết kế BMS cho kỹ sư thiết kế M&E, Tư vấn giám sát BMS cho kỹ sư giám sát và kỹ sư trưởng, Lập trình BMS cho kỹ sư tích hợp, Vận hành và bảo trì tòa nhà cho kỹ thuật viên, Nâng cao HVAC và BMS cho kỹ sư đã có nền tảng."}},
 {"@type":"Question","name":"Mỗi khóa học bao nhiêu buổi?","acceptedAnswer":{"@type":"Answer","text":"Thiết kế BMS 10 buổi, Tư vấn giám sát BMS 10 buổi, Lập trình BMS 12 buổi, Vận hành và bảo trì tòa nhà 7 buổi, Nâng cao HVAC và BMS 15 buổi."}},
 {"@type":"Question","name":"Khi nào khai giảng và học hình thức nào?","acceptedAnswer":{"@type":"Answer","text":"Các khóa khai giảng hàng tuần. Bạn có thể học online hoặc offline."}},
 {"@type":"Question","name":"Có chứng chỉ khi hoàn thành không?","acceptedAnswer":{"@type":"Answer","text":"Có. Học viên hoàn thành khóa nhận chứng chỉ hoàn thành theo cấp độ tương ứng."}}
@@ -738,9 +619,6 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
   var hasIO = 'IntersectionObserver' in window;
   root.classList.add('js');
 
-  /* Nav hairline appears once content scrolls under it */
-  var nav = document.getElementById('nav');
-  /* Mobile menu */
   var btn = document.getElementById('menuBtn');
   var panel = document.getElementById('panel');
   for (var i = 0; i < panel.children.length; i++) {
@@ -756,7 +634,6 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
   panel.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
 
-  /* Reveals: once, below the first screen only */
   var reveals = [].slice.call(document.querySelectorAll('.reveal'));
   if (!hasIO || reduce) {
     reveals.forEach(function (el) { el.classList.add('in'); });
@@ -765,14 +642,13 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
       entries.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
     reveals.forEach(function (el) {
       if (el.getBoundingClientRect().top < window.innerHeight) { el.classList.add('in'); }
       else { io.observe(el); }
     });
   }
 
-  /* Tagline words */
   var tag = document.getElementById('tagline');
   var words = [];
   if (tag) {
@@ -785,55 +661,24 @@ footer { padding-block: var(--sp-600); font-size: 14px; line-height: 20px; }
       if (idx < parts.length - 1) tag.appendChild(document.createTextNode(' '));
       words.push(s);
     });
-    if (reduce) { words.forEach(function (w) { w.classList.add('on'); }); }
-  }
-
-  /* One throttled scroll pass: nav border, hero stack progress, tagline words, rail arrows */
-  var stack = document.getElementById('stack');
-  var rail = document.getElementById('rail');
-  var prev = document.getElementById('prev');
-  var next = document.getElementById('next');
-  var ticking = false;
-  function frame() {
-    ticking = false;
-    var vh = window.innerHeight;
-    nav.classList.toggle('scrolled', window.scrollY > 8);
-    if (stack && !reduce) {
-      var r = stack.getBoundingClientRect();
-      var p = Math.min(1, Math.max(0, (vh - r.top) / (vh * 0.55)));
-      stack.style.setProperty('--p', p.toFixed(3));
-    }
-    if (words.length && !reduce) {
-      var line = vh * 0.7;
-      for (var i = 0; i < words.length; i++) {
-        words[i].classList.toggle('on', words[i].getBoundingClientRect().top < line);
-      }
+    if (reduce) {
+      words.forEach(function (w) { w.classList.add('on'); });
+    } else {
+      var ticking = false;
+      var update = function () {
+        ticking = false;
+        var line = window.innerHeight * 0.7;
+        for (var i = 0; i < words.length; i++) {
+          words[i].classList.toggle('on', words[i].getBoundingClientRect().top < line);
+        }
+      };
+      var onScroll = function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      update();
     }
   }
-  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
-  frame();
 
-  /* Projects rail with arrows */
-  if (rail) {
-    function railState() {
-      prev.disabled = rail.scrollLeft < 4;
-      next.disabled = rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 4;
-    }
-    function step(dir) {
-      var card = rail.querySelector('.proj');
-      var w = card ? card.getBoundingClientRect().width + 16 : 320;
-      rail.scrollBy({ left: dir * w, behavior: reduce ? 'auto' : 'smooth' });
-    }
-    prev.addEventListener('click', function () { step(-1); });
-    next.addEventListener('click', function () { step(1); });
-    rail.addEventListener('scroll', function () { requestAnimationFrame(railState); }, { passive: true });
-    window.addEventListener('resize', railState);
-    railState();
-  }
-
-  /* Current section in nav */
   if (hasIO) {
     var links = [].slice.call(document.querySelectorAll('.nav-links a[href^="#"]:not(.btn)'));
     var map = {};
